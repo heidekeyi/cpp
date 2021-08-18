@@ -365,5 +365,4 @@ FodyWeavers.xsd
 # for clion
 cpp/.idea/
 cpp/cmake-build-*/
-cpp/main.cpp
 
