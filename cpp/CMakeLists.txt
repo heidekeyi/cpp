@@ -8,7 +8,10 @@ add_executable(cpp
         code/Point.cpp code/Point.h
         code/Handle.cpp code/Handle.h
         code/UPoint.cpp code/UPoint.h
-        code/shape/Shape.h
-        code/shape/Rect.cpp code/shape/Rect.h
+        code/proxy/Shape.h
+        code/proxy/Rect.cpp code/proxy/Rect.h
+        code/proxy/Line.cpp code/proxy/Line.h
+        code/proxy/Proxy.cpp code/proxy/Proxy.h
+        code/proxy/test.cpp code/proxy/test.h
 
-        code/shape/Line.cpp code/shape/Line.h code/shape/Proxy.cpp code/shape/Proxy.h code/shape/test.cpp code/shape/test.h)
+        )
