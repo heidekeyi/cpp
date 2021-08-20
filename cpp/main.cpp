@@ -1,6 +1,9 @@
-#include "code/proxy/test.h"
+#include "code/proxy/test_proxy.h"
+#include "code/handle/test_handle.h"
+
 int main() {
-    test();
+    test_proxy();
+    test_handle();
     return 0;
 }
 

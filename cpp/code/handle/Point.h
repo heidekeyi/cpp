@@ -1,5 +1,5 @@
 //
-// Created by 12131 on 2021/8/18.
+// Created by 12131 on 2021/8/20.
 //
 
 #ifndef CPP_POINT_H
@@ -20,7 +20,7 @@ public:
     Point &y(int y);
 
 private:
-    int _x, _y;
+    int iXValue, iYValue;
 };
 
 #endif //CPP_POINT_H
