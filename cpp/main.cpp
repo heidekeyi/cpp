@@ -1,5 +1,6 @@
-#include <iostream>
-
+#include "code/shape/test.h"
 int main() {
-	return 0;
+    test();
+    return 0;
 }
+
