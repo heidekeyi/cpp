@@ -35,7 +35,7 @@ Handle &Handle::operator=(const Handle &rhs) {
 }
 
 Handle::~Handle() {
-    cout << "Handle::~Handle()" << endl;
+    cout << "Handle::HandleThirdThird()" << endl;
     if (0 == --pCounter->iRef) {
         delete pCounter;
         cout << "******Handle release******" << endl;

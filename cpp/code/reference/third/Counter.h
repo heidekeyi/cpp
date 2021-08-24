@@ -5,7 +5,7 @@
 #ifndef CPP_COUNTER_H
 #define CPP_COUNTER_H
 
-#include "Point.h"
+#include "../Point.h"
 
 class Handle;
 

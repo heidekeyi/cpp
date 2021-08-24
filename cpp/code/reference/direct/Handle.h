@@ -1,15 +1,12 @@
 //
-// Created by 12131 on 2021/8/20.
+// Created by 12131 on 2021/8/22.
 //
 
 #ifndef CPP_HANDLE_H
 #define CPP_HANDLE_H
 
-#include "Point.h"
-#include "Counter.h"
+#include "../Point.h"
 
-// 包含一个引用计数类
-// 有引用计数类所引用类所用接口
 class Handle {
 public:
     Handle();
@@ -33,8 +30,8 @@ public:
     Handle &y(int y);
 
 private:
-    void copyOnWrite();
-    Counter *pCounter;
+    Point *pPoint;
+    int *pICounter;
 };
 
 #endif //CPP_HANDLE_H

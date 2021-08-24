@@ -11,8 +11,16 @@ add_executable(cpp
         code/proxy/Line.cpp code/proxy/Line.h
         code/proxy/Proxy.cpp code/proxy/Proxy.h
         code/proxy/test_proxy.cpp code/proxy/test_proxy.h
-#        handle
-        code/handle/Point.cpp code/handle/Point.h
-        code/handle/Handle.cpp code/handle/Handle.h
-        code/handle/Counter.cpp code/handle/Counter.h
-        code/handle/test_handle.cpp code/handle/test_handle.h)
+#        point
+        code/reference/Point.cpp code/reference/Point.h
+#        third
+#        code/reference/third/Handle.cpp code/reference/third/Handle.h
+#        code/reference/third/Counter.cpp code/reference/third/Counter.h
+#        code/reference/third/test_third.cpp code/reference/third/test_third.h
+#        direct
+        code/reference/test_reference.cpp code/reference/test_reference.h
+        code/reference/direct/Handle.cpp code/reference/direct/Handle.h
+        code/reference/direct/test_direct.cpp code/reference/direct/test_direct.h
+#        separate
+
+        code/reference/separate/Count.cpp code/reference/separate/Count.h code/reference/separate/Handle.cpp code/reference/separate/Handle.h)
