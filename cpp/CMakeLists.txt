@@ -1,26 +1,34 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpp)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(cpp
         main.cpp
-#        proxy
-        code/proxy/Shape.h
-        code/proxy/Rect.cpp code/proxy/Rect.h
-        code/proxy/Line.cpp code/proxy/Line.h
-        code/proxy/Proxy.cpp code/proxy/Proxy.h
-        code/proxy/test_proxy.cpp code/proxy/test_proxy.h
-#        point
-        code/reference/Point.cpp code/reference/Point.h
-#        third
-#        code/reference/third/Handle.cpp code/reference/third/Handle.h
-#        code/reference/third/Counter.cpp code/reference/third/Counter.h
-#        code/reference/third/test_third.cpp code/reference/third/test_third.h
-#        direct
-        code/reference/test_reference.cpp code/reference/test_reference.h
-        code/reference/direct/Handle.cpp code/reference/direct/Handle.h
-        code/reference/direct/test_direct.cpp code/reference/direct/test_direct.h
-#        separate
+        #        table
+        code/employ/custom/table/Table.h
+        code/employ/custom/table/EmployeeTable.h
+        code/employ/custom/table/EmployConstraintTable.h
+        code/employ/custom/table/AmountTable.h
+        code/employ/custom/table/StatusTable.h
+        #        test table
+        code/employ/custom/table/TestTable.cpp
+        code/employ/custom/table/TestTable.h
 
-        code/reference/separate/Count.cpp code/reference/separate/Count.h code/reference/separate/Handle.cpp code/reference/separate/Handle.h)
+        #        model
+        code/employ/custom/model/Model.h
+        code/employ/custom/model/StatusModel.h
+        code/employ/custom/model/EmployeeModel.h
+        code/employ/custom/model/AmountModel.h
+        #        test model
+        code/employ/custom/model/TestModel.cpp
+        code/employ/custom/model/TestModel.h
+
+        #        controller
+        code/employ/custom/controller/EmployeeController.h
+        code/employ/custom/controller/Controller.h
+        code/employ/custom/controller/AmountController.h
+        code/employ/custom/controller/StatusController.h
+        #        test controller
+        code/employ/custom/controller/TestController.cpp
+        code/employ/custom/controller/TestController.h)
