@@ -4,73 +4,51 @@
 //
 
 #include "TestTable.h"
-#include "Table.h"
 #include "EmployeeTable.h"
 #include "AmountTable.h"
-#include "StatusTable.h"
-#include <iostream>
+#include <cstdio>
 
-namespace employ::custom::TestTable {
-    using std::cout, std::endl;
-
-    TestTable &TestTable::table() {
-        using employ::custom::Table::Table;
-        Table table{1};
-        cout << table.id() << endl;
-        cout << table.time() << endl;
-        return *this;
-    };
+namespace employ::custom::table {
+    using std::printf;
+    using utils::TimeUtils;
 
     TestTable &TestTable::employee() {
-        using employ::custom::EmployeeTable::EmployeeTable;
-        EmployeeTable emp{1, 111, "kkk"};
-        cout << emp.id() << endl;
-        cout << emp.time() << endl;
-        cout << emp.empNo() << endl;
-        cout << emp.name() << endl;
+        auto t = TimeUtils::timestamp();
+        EmployeeTable arr[]{
+                {"1211309055", "first",  TimeUtils::datetime(t - 2),   TimeUtils::datetime(t - 180000)},
+                {"1213173752", "second", TimeUtils::datetime(t - 1),   TimeUtils::datetime(t - 120000)},
+                {"100086",     "100086", TimeUtils::datetime(t - 100), TimeUtils::datetime(0)},
+                {"166576127",  "first",  TimeUtils::datetime(t - 0),   TimeUtils::datetime(t - 100000)},
+        };
+        arr[2].name("network");
+        for (auto &it : arr) {
+            const char *fire = TimeUtils::empty(it.fire()) ? "nil" : it.fire().c_str();
+            printf("id: %-2d"
+                   "empNo: %-12s"
+                   "name: %-12s"
+                   "hire: %s "
+                   "fire: %-20s"
+                   "createTime: %s\n",
+                   it.id(), it.empNo().c_str(),
+                   it.name().c_str(), it.hire().c_str(),
+                   fire, it.createTime().c_str());
+        }
         return *this;
     }
 
-    TestTable &TestTable::employeeConstraint() {
-        using employ::custom::EmployConstraintTable::EmployConstraintTable;
-        EmployConstraintTable emp{10, 111};
-        cout << emp.id() << endl;
-        cout << emp.time() << endl;
-        cout << emp.empId() << endl;
-        return *this;
-    }
 
     TestTable &TestTable::amount() {
-        using employ::custom::AmountTable::AmountTable;
-        using employ::custom::EmployeeTable::EmployeeTable;
-        EmployeeTable emp{10, 888888, "kkk"};
-        cout << emp.id() << endl;
-        cout << emp.time() << endl;
-        cout << emp.empNo() << endl;
-        cout << emp.name() << endl;
-
-        AmountTable amount{1, emp.id(), 1000};
-        cout << amount.id() << endl;
-        cout << amount.time() << endl;
-        cout << amount.empId() << endl;
-        cout << amount.amount() << endl;
-        return *this;
-    }
-
-    TestTable &TestTable::status() {
-        using employ::custom::StatusTable::StatusTable;
-        using employ::custom::EmployeeTable::EmployeeTable;
-        EmployeeTable emp{10, 888888, "kkk"};
-        cout << emp.id() << endl;
-        cout << emp.time() << endl;
-        cout << emp.empNo() << endl;
-        cout << emp.name() << endl;
-
-        StatusTable status{1, emp.id(), false};
-        cout << status.id() << endl;
-        cout << status.time() << endl;
-        cout << status.empId() << endl;
-        cout << status.status() << endl;
+        AmountTable arr[]{{1,   100},
+                          {222, 2000}};
+        for (auto &it : arr) {
+            printf("id: %-2d "
+                   "empId: %-8d "
+                   "amount: %-8d "
+                   "createTime: %s "
+                   "\n",
+                   it.id(), it.empId(),
+                   it.amount(), it.createTime().c_str());
+        }
         return *this;
     }
 }

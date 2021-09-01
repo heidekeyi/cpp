@@ -7,31 +7,35 @@
 
 #include <vector>
 
-namespace employ::custom::Model {
+namespace employ::custom::model {
+    using std::vector;
+
     template<typename TTable>
     class Model {
     private:
-        static std::vector<TTable> db;
+        static vector<TTable> db;
     public:
         const TTable &fetch(int id) const {
-            return db[id];
+            for (auto &it : db) {
+                if (id == it.id()) {
+                    return it;
+                }
+            }
+            throw "id is not exist";
         }
 
-        const std::vector<TTable> &fetch() const {
+        const vector<TTable> &fetch() const {
             return db;
         }
 
-        [[nodiscard]] int size() const {
-            return db.size();
-        }
-
-        Model &insert(const TTable &it) {
+        int insert(const TTable &it) {
             db.push_back(it);
-            return *this;
+            return db.size() - 1;
         }
     };
+
     template<typename TTable>
-    std::vector<TTable> Model<TTable>::db;
+    vector<TTable> Model<TTable>::db;
 }
 
 #endif //CPP_MODEL_H

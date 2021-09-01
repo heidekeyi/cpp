@@ -5,12 +5,10 @@
 #ifndef CPP_TESTCONTROLLER_H
 #define CPP_TESTCONTROLLER_H
 
-namespace employ::custom::TestController {
+namespace employ::custom::Controller {
     class TestController {
     public:
         TestController &amount();
-
-        TestController &status();
 
         TestController &employee();
     };

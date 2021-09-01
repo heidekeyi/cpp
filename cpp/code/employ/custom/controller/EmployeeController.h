@@ -5,19 +5,36 @@
 #ifndef CPP_EMPLOYEECONTROLLER_H
 #define CPP_EMPLOYEECONTROLLER_H
 
-#include <string>
+#include <iostream>
 #include "../model/EmployeeModel.h"
-#include "Controller.h"
+#include "AmountController.h"
+#include "BaseController.h"
+#include "../utils/TimeUtils.h"
 
-namespace employ::custom::EmployeeController {
-    using employ::custom::Controller::Controller;
-    using employ::custom::EmployeeModel::EmployeeModel;
-    using employ::custom::EmployeeTable::EmployeeTable;
+namespace employ::custom::Controller {
+    using namespace employ::custom::Model;
+    using namespace employ::custom::Controller;
+    using namespace utils;
 
-    class EmployeeController : public Controller<EmployeeModel, EmployeeTable> {
+    class EmployeeController : public BaseController<EmployeeModel, EmployeeTable> {
     public:
-        EmployeeController &insert(int empNo, const std::string &name) {
-            model.insert(EmployeeTable(model.size() + 1, empNo, name));
+        EmployeeController &show(int id) {
+            auto emp = model.fetch(id);
+            printf("id: -8%d "
+                   "empNo: -8%d "
+                   "name: -12%s "
+                   "salary: -8%d "
+                   "hire: %s ",
+                   emp.id(),
+                   emp.empNo(),
+                   emp.name().c_str(),
+                   AmountController{}.salary(id),
+                   emp.name().c_str());
+            using std::cout, std::endl;
+            if (!TimeUtils::empty(emp.fire())) {
+                cout << "fire: " << emp.hire();
+            }
+            cout << endl;
             return *this;
         }
     };

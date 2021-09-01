@@ -8,12 +8,10 @@
 #include "Model.h"
 #include "../table/EmployeeTable.h"
 
-namespace employ::custom::EmployeeModel {
-    using employ::custom::Model::Model;
-    using employ::custom::EmployeeTable::EmployeeTable;
+namespace employ::custom::model {
+    using employ::custom::table::EmployeeTable;
 
     class EmployeeModel : public Model<EmployeeTable> {
-
     };
 }
 

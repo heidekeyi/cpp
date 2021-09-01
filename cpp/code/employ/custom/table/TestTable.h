@@ -5,16 +5,10 @@
 #ifndef CPP_TESTTABLE_H
 #define CPP_TESTTABLE_H
 
-namespace employ::custom::TestTable {
+namespace employ::custom::table {
     class TestTable {
     public:
-        TestTable &table();
-
         TestTable &amount();
-
-        TestTable &status();
-
-        TestTable &employeeConstraint();
 
         TestTable &employee();
     };

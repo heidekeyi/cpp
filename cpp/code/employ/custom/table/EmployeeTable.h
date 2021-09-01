@@ -7,23 +7,55 @@
 
 #include <string>
 #include <utility>
-#include "Table.h"
+#include "../utils/TimeUtils.h"
+#include "./BaseTable.h"
 
-namespace employ::custom::EmployeeTable {
-    using employ::custom::Table::Table;
+namespace employ::custom::table {
+    using std::string;
 
-    class EmployeeTable : public Table {
+    class EmployeeTable : public BaseTable {
+    private:
+        static int valCount;
     public:
-        EmployeeTable(int id, int empNo, std::string name)
-                : Table{id}, valEmpNo{empNo}, valName{std::move(name)} {}
+        EmployeeTable(string empNo, string name,
+                      string hire, string fire)
+                : BaseTable(EmployeeTable::valCount++),
+                  valEmpNo{std::move(empNo)}, valName{std::move(name)},
+                  valHire{std::move(hire)}, valFire{std::move(fire)} {}
 
-        const auto &name() const { return valName; }
+        [[nodiscard]] const auto &empNo() const { return valEmpNo; }
 
-        [[nodiscard]] auto empNo() const { return valEmpNo; }
+        [[nodiscard]] const auto &fire() const { return valFire; }
+
+        [[nodiscard]] const auto &hire() const { return valHire; }
+
+        [[nodiscard]] const auto &name() const { return valName; }
+
+        auto empNo(const string &empNo) {
+            valEmpNo = empNo;
+            return *this;
+        }
+
+        auto fire(const string &fireTime) {
+            valFire = fireTime;
+            return *this;
+        }
+
+        auto hire(const string &hireTime) {
+            valHire = hireTime;
+            return *this;
+        }
+
+        auto name(const string &name) {
+            valName = name;
+            return *this;
+        }
 
     private:
-        std::string valName;
-        int valEmpNo;
+        string valEmpNo;
+        string valName;
+        string valFire;
+        string valHire;
     };
 }
 #endif //CPP_EMPLOYEETABLE_H

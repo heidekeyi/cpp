@@ -5,11 +5,9 @@
 #ifndef CPP_TESTMODEL_H
 #define CPP_TESTMODEL_H
 
-namespace employ::custom::TestModel {
+namespace employ::custom::model {
     class TestModel {
     public:
-        TestModel &status();
-
         TestModel &employee();
 
         TestModel &amount();

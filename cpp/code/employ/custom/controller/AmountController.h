@@ -6,18 +6,22 @@
 #define CPP_AMOUNTCONTROLLER_H
 
 #include "../model/AmountModel.h"
-#include "Controller.h"
+#include "BaseController.h"
 
-namespace employ::custom::AmountController {
-    using employ::custom::Controller::Controller;
-    using employ::custom::AmountModel::AmountModel;
-    using employ::custom::AmountTable::AmountTable;
+namespace employ::custom::Controller {
+    using namespace employ::custom::Model;
+    using namespace employ::custom::Table;
 
-    class AmountController : public Controller<AmountModel, AmountTable> {
+    class AmountController : public BaseController<AmountModel, AmountTable> {
     public:
-        AmountController &insert(int empId, int amount) {
-            model.insert(AmountTable(model.size() + 1, empId, amount));
-            return *this;
+        [[nodiscard]] int salary(int empId) const {
+            int sum = 0;
+            for (auto &it : model.fetch()) {
+                if (it.empId() == empId) {
+                    sum += it.amount();
+                }
+            }
+            return sum;
         }
     };
 }
