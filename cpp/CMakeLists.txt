@@ -5,45 +5,102 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(cpp
         main.cpp
-        #        table
-        code/employ/custom/table/BaseTable.h
-        code/employ/custom/table/EmployeeTable.h
-        code/employ/custom/table/AmountTable.h
-        code/employ/custom/table/EmployeeTable.cpp
-        code/employ/custom/table/AmountTable.cpp
-        #        test table
-        code/employ/custom/table/TestTable.h
-        code/employ/custom/table/TestTable.cpp
-        #        model
-        code/employ/custom/model/Model.h
-        code/employ/custom/model/EmployeeModel.h
-        code/employ/custom/model/AmountModel.h
-        #        test model
-        code/employ/custom/model/TestModel.cpp
-        code/employ/custom/model/TestModel.h
-        #        #        controller
-        #        code/employ/custom/controller/BaseController.h
-        #        code/employ/custom/controller/EmployeeController.h
-        #        code/employ/custom/controller/AmountController.h
-        #        #        test controller
-        #        code/employ/custom/controller/TestController.cpp
-        #        code/employ/custom/controller/TestController.h
-        #        utils time
-        code/employ/custom/utils/TimeUtils.h
-        #        test utils time
-        code/employ/custom/utils/TestUtils.cpp
-        code/employ/custom/utils/TestUtils.h
-        #        ui
-        code/employ/custom/ui/MenuUI.h
-        code/employ/custom/ui/EmployeeUI.h
-        #        test ui
-        code/employ/custom/ui/TestUI.cpp
-        code/employ/custom/ui/TestUI.h
-        #        entry
-        code/employ/custom/Entry.cpp
-        code/employ/custom/Entry.h
-        #        entry
-        code/employ/custom/driver/BaseDriver.h
-        code/employ/custom/driver/StreamDriver.h
-        code/employ/custom/driver/StreamDriver.cpp
+
+        #        TestUtils test
+        code/utils/test/TestUtils.cpp
+        code/utils/test/TestUtils.h
+
+        #        TimeUtils impl
+        code/utils/time/TimeUtils.h
+        #        TimeUtilsTest test
+        code/utils/time/TimeUtilsTest.cpp
+        code/utils/time/TimeUtilsTest.h
+        #        StreamUtils impl
+        code/utils/stream/StreamUtils.cpp
+        code/utils/stream/StreamUtils.h
+        #        StreamUtilsTest test
+        code/utils/stream/StreamUtilsTest.cpp
+        code/utils/stream/StreamUtilsTest.h
+
+
+        #        TestCustom test
+        code/employ/custom/test/TestCustom.cpp
+        code/employ/custom/test/TestCustom.h
+
+        #        TestTable test
+        code/employ/custom/table/test/TestTable.cpp
+        code/employ/custom/table/test/TestTable.h
+
+        #        BaseTable impl
+        code/employ/custom/table/base/BaseTable.h
+        #        BaseTableTest test
+        code/employ/custom/table/base/BaseTableTest.cpp
+        code/employ/custom/table/base/BaseTableTest.h
+        #        AmountTable impl
+        code/employ/custom/table/amount/AmountTable.h
+        code/employ/custom/table/amount/AmountTable.cpp
+        #        AmountTableTest test
+        code/employ/custom/table/amount/AmountTableTest.h
+        code/employ/custom/table/amount/AmountTableTest.cpp
+        #        EmployeeTable impl
+        code/employ/custom/table/employee/EmployeeTable.h
+        code/employ/custom/table/employee/EmployeeTable.cpp
+        #        EmployeeTableTest test
+        code/employ/custom/table/employee/EmployeeTableTest.cpp
+        code/employ/custom/table/employee/EmployeeTableTest.h
+
+        #        TestModel test
+        code/employ/custom/model/test/TestModel.cpp
+        code/employ/custom/model/test/TestModel.h
+        #        AmountModel impl
+        code/employ/custom/model/amount/AmountModel.h
+        code/employ/custom/model/amount/AmountModel.cpp
+        #        AmountModelTest Test
+        code/employ/custom/model/amount/AmountModelTest.h
+        code/employ/custom/model/amount/AmountModelTest.cpp
+        #        EmployeeModel impl
+        code/employ/custom/model/employee/EmployeeModel.cpp
+        code/employ/custom/model/employee/EmployeeModel.h
+        #        employeeModel test
+        code/employ/custom/model/employee/EmployeeModelTest.cpp
+        code/employ/custom/model/employee/EmployeeModelTest.h
+
+        #        AppCustom impl
+        code/employ/custom/app/AppCustom.cpp
+        code/employ/custom/app/AppCustom.h
+
+        #        TestUI test
+        code/employ/custom/ui/test/TestUI.cpp
+        code/employ/custom/ui/test/TestUI.h
+        #        BaseUI impl
+        code/employ/custom/ui/base/BaseUI.h
+        #        QuitUI impl
+        code/employ/custom/ui/quit/QuitUI.cpp
+        code/employ/custom/ui/quit/QuitUI.h
+        #        QuitUITest test
+        code/employ/custom/ui/quit/QuitUITest.cpp
+        code/employ/custom/ui/quit/QuitUITest.h
+        #        EmployeeUI impl
+        code/employ/custom/ui/employee/EmployeeUI.cpp
+        code/employ/custom/ui/employee/EmployeeUI.h
+        #        EmployeeUITest test
+        code/employ/custom/ui/employee/EmployeeUITest.cpp
+        code/employ/custom/ui/employee/EmployeeUITest.h
+        #        AllUI impl
+        code/employ/custom/ui/all/AllUI.cpp
+        code/employ/custom/ui/all/AllUI.h
+        #        TestController test
+        code/employ/custom/controller/test/TestController.cpp
+        code/employ/custom/controller/test/TestController.h
+        #        AmountController impl
+        code/employ/custom/controller/amount/AmountController.h
+        code/employ/custom/controller/amount/AmountController.cpp
+        #        EmployeeController impl
+        code/employ/custom/controller/employee/EmployeeController.h
+        code/employ/custom/controller/employee/EmployeeController.cpp
+
+        code/employ/custom/controller/amount/AmountControllerTest.cpp
+        code/employ/custom/controller/amount/AmountControllerTest.h
+        code/employ/custom/controller/employee/EmployeeControllerTest.cpp
+        code/employ/custom/controller/employee/EmployeeControllerTest.h
         )
