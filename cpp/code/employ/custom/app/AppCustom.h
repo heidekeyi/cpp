@@ -4,7 +4,6 @@
 
 #pragma once
 
-#include "../ui/base/BaseUI.h"
 #include "../ui/quit/QuitUI.h"
 #include <vector>
 
@@ -15,7 +14,7 @@ namespace employ::custom {
     class AppCustom {
     public:
         ~AppCustom() {
-            for (auto it : valUI) {
+            for (auto it : vUI) {
                 delete it;
             }
         }
@@ -26,7 +25,7 @@ namespace employ::custom {
         AppCustom &initUI();
 
     private:
-        vector<BaseUI *> valUI;
+        vector<BaseUI *> vUI;
         QuitUI *quitUi{new QuitUI};
     };
 }

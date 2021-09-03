@@ -6,7 +6,6 @@
 #include "../../../utils/display/DisplayUtils.h"
 #include <iostream>
 
-
 namespace employ::custom::table {
     using std::cout, std::endl;
     using utils::DisplayUtils;

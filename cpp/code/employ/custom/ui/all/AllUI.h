@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_ALLUI_H
-#define CPP_ALLUI_H
+#pragma once
 
 #include "../base/BaseUI.h"
 
@@ -15,4 +14,4 @@ namespace employ::custom::ui {
         void action() override;
     };
 }
-#endif //CPP_ALLUI_H
+

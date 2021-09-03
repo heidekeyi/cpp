@@ -9,32 +9,33 @@
 
 namespace employ::custom {
     using namespace employ::custom::ui;
+    using std::cout, std::endl;
+    using utils::StreamUtils;
 
     void AppCustom::start() {
-        using utils::StreamUtils;
-        using std::cout, std::endl;
-        if (valUI.empty()) {
+        if (vUI.empty()) {
             initUI();
         }
         do {
-            for (int i = 0; i < valUI.size(); ++i) {
+            for (int i = 0; i < vUI.size(); ++i) {
                 cout << i + 1 << ") ";
-                valUI[i]->displayMenu();
+                vUI[i]->displayMenu();
             }
             cout << "please select menu id:\t";
             size_t val = StreamUtils::intValue() - 1;
-            if (val >= valUI.size()) {
+            StreamUtils::clear();
+            if (val >= vUI.size()) {
                 cout << "id is invalid" << endl;
             } else {
-                valUI[val]->action();
+                vUI[val]->action();
             }
         } while (!quitUi->quitStatus());
-//        cout << "good bye!" << endl;
+        cout << "good bye!" << endl;
     }
 
     AppCustom &AppCustom::initUI() {
-        valUI.push_back(new AllUI);
-        valUI.push_back(quitUi);
+        vUI.push_back(new AllUI);
+        vUI.push_back(quitUi);
         return *this;
     }
 }

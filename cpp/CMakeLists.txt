@@ -55,23 +55,26 @@ add_executable(cpp
         code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
         code/employ/custom/controller/employee/EmployeeControllerDriver.h
 
-        #        code/employ/custom/app/AppCustom.cpp
-        #        code/employ/custom/app/AppCustom.h
+        code/employ/custom/app/AppCustom.cpp
+        code/employ/custom/app/AppCustom.h
 
 
+        code/employ/custom/ui/UIDisplay.cpp
+        code/employ/custom/ui/UIDisplay.h
         code/employ/custom/ui/base/BaseUI.h
         code/employ/custom/ui/quit/QuitUI.cpp
         code/employ/custom/ui/quit/QuitUI.h
         code/employ/custom/ui/quit/QuitUIDriver.cpp
         code/employ/custom/ui/quit/QuitUIDriver.h
+        code/employ/custom/ui/all/AllUI.cpp
+        code/employ/custom/ui/all/AllUI.h
+        code/employ/custom/ui/all/AllUIDriver.cpp
+        code/employ/custom/ui/all/AllUIDriver.h
         #        #        EmployeeUI impl
         #        code/employ/custom/ui/employee/EmployeeUI.cpp
         #        code/employ/custom/ui/employee/EmployeeUI.h
         #        #        EmployeeUITest test
         #        code/employ/custom/ui/employee/EmployeeUITest.cpp
         #        code/employ/custom/ui/employee/EmployeeUITest.h
-        #        #        AllUI impl
-        #        code/employ/custom/ui/get/AllUI.cpp
-        #        code/employ/custom/ui/get/AllUI.h
 
         )

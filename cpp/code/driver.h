@@ -16,6 +16,8 @@
 #include "employ/custom/controller/amount/AmountControllerDriver.h"
 #include "employ/custom/controller/employee/EmployeeControllerDriver.h"
 #include "employ/custom/ui/quit/QuitUIDriver.h"
+#include "employ/custom/ui/all/AllUIDriver.h"
+#include "employ/custom/app/AppCustom.h"
 
 void driver() {
 
@@ -65,11 +67,17 @@ void driver() {
 //            .all()
 //            .hire()
 //            .fire();
-
-    employ::custom::ui::QuitUIDriver{}
+//    employ::custom::ui::QuitUIDriver{}
+//            .displayMenu()
+//            .quitStatus()
+//            .action();
+    employ::custom::ui::AllUIDriver{}
             .displayMenu()
-            .quitStatus()
             .action();
+
+
+
+//    employ::custom::AppCustom{}.start();
 }
 
 

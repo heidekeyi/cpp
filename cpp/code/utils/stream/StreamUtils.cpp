@@ -26,6 +26,7 @@ namespace utils {
     }
 
     void StreamUtils::clear() {
+        cin.clear();
         while (true) {
             char ch = cin.get();
             if ('\r' == ch || '\n' == ch) {
