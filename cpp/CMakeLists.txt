@@ -6,35 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(cpp
         main.cpp
 
-
-        #        #        AppCustom impl
-        #        code/employ/custom/app/AppCustom.cpp
-        #        code/employ/custom/app/AppCustom.h
-        #
-        #        #        BaseUI impl
-        #        code/employ/custom/ui/base/BaseUI.h
-        #        #        QuitUI impl
-        #        code/employ/custom/ui/quit/QuitUI.cpp
-        #        code/employ/custom/ui/quit/QuitUI.h
-        #        #        QuitUITest test
-        #        code/employ/custom/ui/quit/QuitUITest.cpp
-        #        code/employ/custom/ui/quit/QuitUITest.h
-        #        #        EmployeeUI impl
-        #        code/employ/custom/ui/employee/EmployeeUI.cpp
-        #        code/employ/custom/ui/employee/EmployeeUI.h
-        #        #        EmployeeUITest test
-        #        code/employ/custom/ui/employee/EmployeeUITest.cpp
-        #        code/employ/custom/ui/employee/EmployeeUITest.h
-        #        #        AllUI impl
-        #        code/employ/custom/ui/get/AllUI.cpp
-        #        code/employ/custom/ui/get/AllUI.h
-        #
-
-
-        #        code/employ/custom/controller/amount/AmountControllerDriver.cpp
-        #        code/employ/custom/controller/amount/AmountControllerDriver.h
-        #        code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
-        #        code/employ/custom/controller/employee/EmployeeControllerDriver.h
         code/driver.h
 
         code/utils/display/DisplayUtils.h
@@ -83,5 +54,24 @@ add_executable(cpp
         code/employ/custom/controller/employee/EmployeeController.h
         code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
         code/employ/custom/controller/employee/EmployeeControllerDriver.h
+
+        #        code/employ/custom/app/AppCustom.cpp
+        #        code/employ/custom/app/AppCustom.h
+
+
+        code/employ/custom/ui/base/BaseUI.h
+        code/employ/custom/ui/quit/QuitUI.cpp
+        code/employ/custom/ui/quit/QuitUI.h
+        code/employ/custom/ui/quit/QuitUIDriver.cpp
+        code/employ/custom/ui/quit/QuitUIDriver.h
+        #        #        EmployeeUI impl
+        #        code/employ/custom/ui/employee/EmployeeUI.cpp
+        #        code/employ/custom/ui/employee/EmployeeUI.h
+        #        #        EmployeeUITest test
+        #        code/employ/custom/ui/employee/EmployeeUITest.cpp
+        #        code/employ/custom/ui/employee/EmployeeUITest.h
+        #        #        AllUI impl
+        #        code/employ/custom/ui/get/AllUI.cpp
+        #        code/employ/custom/ui/get/AllUI.h
 
         )

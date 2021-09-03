@@ -29,6 +29,7 @@ namespace employ::custom {
                 valUI[val]->action();
             }
         } while (!quitUi->quitStatus());
+//        cout << "good bye!" << endl;
     }
 
     AppCustom &AppCustom::initUI() {

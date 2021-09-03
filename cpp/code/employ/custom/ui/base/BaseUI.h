@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_BASEUI_H
-#define CPP_BASEUI_H
+#pragma once
 
 namespace employ::custom::ui {
     class BaseUI {
@@ -12,8 +11,7 @@ namespace employ::custom::ui {
 
         virtual void action() = 0;
 
-        virtual ~BaseUI() {}
+        virtual ~BaseUI() = default;
     };
 }
 
-#endif //CPP_BASEUI_H

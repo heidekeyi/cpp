@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_APPCUSTOM_H
-#define CPP_APPCUSTOM_H
+#pragma once
 
 #include "../ui/base/BaseUI.h"
 #include "../ui/quit/QuitUI.h"
@@ -31,4 +30,4 @@ namespace employ::custom {
         QuitUI *quitUi{new QuitUI};
     };
 }
-#endif //CPP_APPCUSTOM_H
+

@@ -10,7 +10,6 @@ namespace employ::custom::ui {
 
     void QuitUI::action() {
         valQuitStatus = true;
-        cout << "good bye!" << endl;
     }
 
     void QuitUI::displayMenu() {
