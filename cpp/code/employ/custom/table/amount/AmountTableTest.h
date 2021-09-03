@@ -2,8 +2,8 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_AMOUNTTABLETEST_H
-#define CPP_AMOUNTTABLETEST_H
+#pragma once
+
 namespace employ::custom::table {
     class AmountTableTest {
     public:
@@ -14,4 +14,4 @@ namespace employ::custom::table {
         AmountTableTest &clearCount();
     };
 }
-#endif //CPP_AMOUNTTABLETEST_H
+

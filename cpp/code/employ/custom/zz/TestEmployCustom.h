@@ -5,7 +5,7 @@
 #ifndef CPP_TESTEMPLOYCUSTOM_H
 #define CPP_TESTEMPLOYCUSTOM_H
 
-#include "table/base/BaseTableTest.h"
+#include "../table/base/BaseTableDriver.h"
 
 namespace employ::custom::test {
     using namespace employ::custom::table;

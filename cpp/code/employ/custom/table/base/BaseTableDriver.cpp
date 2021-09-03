@@ -2,18 +2,18 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#include "BaseTableTest.h"
+#include "BaseTableDriver.h"
 #include "BaseTable.h"
 #include "../TableDisplay.h"
 
 namespace employ::custom::table {
 
-    BaseTableTest &BaseTableTest::id() {
+    BaseTableDriver &BaseTableDriver::id() {
         TableDisplay::base(BaseTable{100});
         return *this;
     }
 
-    BaseTableTest &BaseTableTest::createTime() {
+    BaseTableDriver &BaseTableDriver::createTime() {
         TableDisplay::base(BaseTable{100});
         return *this;
     }

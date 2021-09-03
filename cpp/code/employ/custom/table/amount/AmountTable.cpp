@@ -12,7 +12,9 @@ namespace employ::custom::table {
     }
 
     AmountTable::AmountTable(int empId, int amount)
-            : BaseTable{AmountTable::valCount}, valEmpId{empId}, valAmount{amount} {
+            : BaseTable{AmountTable::valCount},
+              valEmpId{empId}, valAmount{amount} {
+        ++AmountTable::valCount;
     }
 
     int AmountTable::empId() const {

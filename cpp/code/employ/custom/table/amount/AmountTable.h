@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/8/31.
 //
 
-#ifndef CPP_AMOUNTTABLE_H
-#define CPP_AMOUNTTABLE_H
+#pragma once
 
 #include "../base/BaseTable.h"
 
@@ -32,4 +31,4 @@ namespace employ::custom::table {
 
 
 }
-#endif //CPP_AMOUNTTABLE_H
+

@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/9/1.
 //
 
-#ifndef CPP_BASETABLE_H
-#define CPP_BASETABLE_H
+#pragma once
 
 #include <string>
 #include "../../../../utils/time/TimeUtils.h"
@@ -22,8 +21,8 @@ namespace employ::custom::table {
 
     private:
         const int valId;
-        const string valCreateTime{TimeUtils::nowDatetime()};
+        const string valCreateTime{TimeUtils::datetime()};
     };
 }
 
-#endif //CPP_BASETABLE_H
+
