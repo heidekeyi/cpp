@@ -79,8 +79,8 @@ add_executable(cpp
         code/employ/custom/table/amount/AmountTable.h
         code/employ/custom/table/amount/AmountTableDriver.cpp
         code/employ/custom/table/amount/AmountTableDriver.h
-#        code/employ/custom/table/employee/EmployeeTable.h
-#        code/employ/custom/table/employee/EmployeeTable.cpp
-#        code/employ/custom/table/employee/EmployeeTableTest.cpp
-#        code/employ/custom/table/employee/EmployeeTableTest.h
+        code/employ/custom/table/employee/EmployeeTable.h
+        code/employ/custom/table/employee/EmployeeTable.cpp
+        code/employ/custom/table/employee/EmployeeTableDriver.cpp
+        code/employ/custom/table/employee/EmployeeTableDriver.h
         )

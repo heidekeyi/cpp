@@ -6,6 +6,7 @@
 
 #include "amount/AmountTable.h"
 #include "base/BaseTable.h"
+#include "employee/EmployeeTable.h"
 #include <vector>
 
 namespace employ::custom::table {
@@ -13,13 +14,17 @@ namespace employ::custom::table {
 
     class TableDisplay {
     public:
-        static void base(const BaseTable &it);
+        static void base(const BaseTable &obj);
 
         static void base(const vector<BaseTable> &v);
 
-        static void amount(const AmountTable &it);
+        static void amount(const AmountTable &obj);
 
         static void amount(const vector<AmountTable> &v);
+
+        static void employee(const EmployeeTable &obj);
+
+        static void employee(const vector<EmployeeTable> &v);
     };
 }
 

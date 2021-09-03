@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/8/31.
 //
 
-#ifndef CPP_EMPLOYEETABLE_H
-#define CPP_EMPLOYEETABLE_H
+#pragma once
 
 #include <string>
 #include <utility>
@@ -16,40 +15,28 @@ namespace employ::custom::table {
     private:
         static int valCount;
     public:
+    public:
+        static void clearCount();
+
+    public:
         EmployeeTable(string empNo, string name,
-                      string hire, string fire)
-                : BaseTable(EmployeeTable::valCount++),
-                  valEmpNo{std::move(empNo)}, valName{std::move(name)},
-                  valHire{std::move(hire)}, valFire{std::move(fire)} {}
+                      string hire, string fire);
 
-        [[nodiscard]] const auto &empNo() const { return valEmpNo; }
+        [[nodiscard]] const string &empNo() const;
 
-        [[nodiscard]] const auto &fire() const { return valFire; }
+        EmployeeTable &empNo(const string &empNo);
 
-        [[nodiscard]] const auto &hire() const { return valHire; }
+        [[nodiscard]] const string &name() const;
 
-        [[nodiscard]] const auto &name() const { return valName; }
+        EmployeeTable &name(const string &name);
 
-        auto empNo(const string &empNo) {
-            valEmpNo = empNo;
-            return *this;
-        }
+        [[nodiscard]] const string &hire() const;
 
-        auto fire(const string &fireTime) {
-            valFire = fireTime;
-            return *this;
-        }
+        EmployeeTable &hire(const string &hire);
 
-        auto hire(const string &hireTime) {
-            valHire = hireTime;
-            return *this;
-        }
+        [[nodiscard]] const string &fire() const;
 
-        auto name(const string &name) {
-            valName = name;
-            return *this;
-        }
-
+        EmployeeTable &fire(const string &fire);
     private:
         string valEmpNo;
         string valName;
@@ -57,4 +44,4 @@ namespace employ::custom::table {
         string valHire;
     };
 }
-#endif //CPP_EMPLOYEETABLE_H
+

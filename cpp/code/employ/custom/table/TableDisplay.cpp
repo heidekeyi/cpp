@@ -53,4 +53,32 @@ namespace employ::custom::table {
                  << endl;
         }
     }
+
+    void TableDisplay::employee(const EmployeeTable &obj) {
+        employee(vector<EmployeeTable>{obj});
+    }
+
+    void TableDisplay::employee(const vector<EmployeeTable> &v) {
+        auto align = DisplayUtils::left();
+        auto wId = DisplayUtils::width(6);
+        auto wTime = DisplayUtils::width(21);
+        auto wEmpNo = DisplayUtils::width(8);
+        auto wName = DisplayUtils::width(8);
+        cout << align << wId << "id"
+             << align << wTime << "createTime"
+             << align << wEmpNo << "empNo"
+             << align << wName << "name"
+             << align << wTime << "hireTime"
+             << align << wTime << "fireTime"
+             << endl;
+        for (auto &it : v) {
+            cout << align << wId << it.id()
+                 << align << wTime << it.createTime()
+                 << align << wEmpNo << it.empNo()
+                 << align << wName << it.name()
+                 << align << wTime << it.hire()
+                 << align << wTime << it.fire()
+                 << endl;
+        }
+    }
 }
