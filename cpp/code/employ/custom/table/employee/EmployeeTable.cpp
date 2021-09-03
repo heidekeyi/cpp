@@ -23,7 +23,7 @@ namespace employ::custom::table {
         ++EmployeeTable::staticCount;
     }
 
-    const string &EmployeeTable::empNo() const {
+    string EmployeeTable::empNo() const {
         return valEmpNo;
     }
 
@@ -32,7 +32,7 @@ namespace employ::custom::table {
         return *this;
     }
 
-    const string &EmployeeTable::name() const {
+    string EmployeeTable::name() const {
         return valName;
     }
 
@@ -41,7 +41,7 @@ namespace employ::custom::table {
         return *this;
     }
 
-    const string &EmployeeTable::hire() const {
+    string EmployeeTable::hire() const {
         return valHire;
     }
 
@@ -50,7 +50,7 @@ namespace employ::custom::table {
         return *this;
     }
 
-    const string &EmployeeTable::fire() const {
+    string EmployeeTable::fire() const {
         return valFire;
     }
 

@@ -15,11 +15,11 @@ namespace employ::custom::controller {
 
     class AmountController {
     public:
-        const AmountTable &get(size_t id);
+        [[nodiscard]] AmountTable get(size_t id) const;
 
-        const vector<AmountTable> &get();
+        [[nodiscard]] vector<AmountTable> get() const;
 
-        vector<int> salary(const vector<size_t> &vEmpId);
+        [[nodiscard]] vector<int> salary(const vector<size_t> &vEmpId) const;
 
         size_t insert(size_t empId, int amount);
 

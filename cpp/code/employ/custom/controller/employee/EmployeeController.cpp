@@ -7,14 +7,6 @@
 
 
 namespace employ::custom::controller {
-    const EmployeeTable &EmployeeController::get(size_t id) {
-        return model.fetchOne(id);
-    }
-
-    const vector<EmployeeTable> &EmployeeController::all() {
-        return model.fetchAll();
-    }
-
     vector<int> EmployeeController::salary(const vector<EmployeeTable> &employee) {
         vector<size_t> v;
         v.reserve(employee.size());
@@ -24,16 +16,24 @@ namespace employ::custom::controller {
         return AmountController{}.salary(v);
     }
 
+    EmployeeTable EmployeeController::get(size_t id) const {
+        return model.fetchOne(id);
+    }
+
+    vector<EmployeeTable> EmployeeController::all() const {
+        return model.fetchAll();
+    }
+
     size_t EmployeeController::insert(const string &empNo, const string &name,
                                       const string &hire, const string &fire) {
         return model.insert(EmployeeTable{empNo, name, hire, fire});
     }
 
-    vector <EmployeeTable> EmployeeController::hire() {
+    vector<EmployeeTable> EmployeeController::hire() const {
         return model.fetchHire();
     }
 
-    vector <EmployeeTable> EmployeeController::fire() {
+    vector<EmployeeTable> EmployeeController::fire() const {
         return model.fetchFire();
     }
 }

@@ -6,7 +6,7 @@
 namespace employ::custom::model {
     vector<AmountTable> AmountModel::staticDataBase;
 
-    const AmountTable &AmountModel::fetchOne(size_t id) const {
+    AmountTable AmountModel::fetchOne(size_t id) const {
         for (auto &it : db) {
             if (it.id() == id) {
                 return it;
@@ -15,15 +15,15 @@ namespace employ::custom::model {
         throw "id of data is not exist";
     }
 
-    const vector<AmountTable> &AmountModel::fetchAll() const {
+    vector<AmountTable> AmountModel::fetchAll() const {
         return db;
     }
 
-    int AmountModel::fetchSalary(size_t empId) {
+    int AmountModel::fetchSalary(size_t empId) const {
         return fetchSalary(vector<size_t>{empId})[0];
     }
 
-    vector<int> AmountModel::fetchSalary(const vector<size_t> &vEmpIds) {
+    vector<int> AmountModel::fetchSalary(const vector<size_t> &vEmpIds) const {
         vector<int> v;
         for (auto id : vEmpIds) {
             int sum = 0;

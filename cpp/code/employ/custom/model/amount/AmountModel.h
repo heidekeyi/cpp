@@ -15,13 +15,13 @@ namespace employ::custom::model {
     private:
         static vector<AmountTable> staticDataBase;
     public:
-        [[nodiscard]] const AmountTable &fetchOne(size_t id) const;
+        [[nodiscard]] AmountTable fetchOne(size_t id) const;
 
-        [[nodiscard]] const vector<AmountTable> &fetchAll() const;
+        [[nodiscard]] vector<AmountTable> fetchAll() const;
 
-        int fetchSalary(size_t empId);
+        [[nodiscard]] int fetchSalary(size_t empId) const;
 
-        vector<int> fetchSalary(const vector <size_t> &vEmpId);
+        [[nodiscard]] vector<int> fetchSalary(const vector<size_t> &vEmpId) const;
 
         size_t insert(const AmountTable &obj);
 

@@ -14,7 +14,7 @@ namespace employ::custom::table {
         return valId;
     }
 
-    const string &BaseTable::createTime() const {
+    string BaseTable::createTime() const {
         return valCreateTime;
     }
 }

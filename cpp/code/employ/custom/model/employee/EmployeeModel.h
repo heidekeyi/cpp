@@ -15,15 +15,15 @@ namespace employ::custom::model {
     private:
         static vector<EmployeeTable> valDataBase;
     public:
-        [[nodiscard]] const vector<EmployeeTable> &fetchAll() const;
+        [[nodiscard]] vector<EmployeeTable> fetchAll() const;
 
-        [[nodiscard]] const EmployeeTable &fetchOne(size_t id) const;
-
-        size_t insert(const EmployeeTable &obj);
+        [[nodiscard]] EmployeeTable fetchOne(size_t id) const;
 
         [[nodiscard]] vector<EmployeeTable> fetchFire() const;
 
         [[nodiscard]] vector<EmployeeTable> fetchHire() const;
+
+        size_t insert(const EmployeeTable &obj);
 
     private:
         vector<EmployeeTable> &db{EmployeeModel::valDataBase};

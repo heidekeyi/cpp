@@ -32,11 +32,11 @@ namespace employ::custom::model {
         return v;
     }
 
-    const vector<EmployeeTable> &EmployeeModel::fetchAll() const {
+    vector<EmployeeTable> EmployeeModel::fetchAll() const {
         return db;
     }
 
-    const EmployeeTable &EmployeeModel::fetchOne(size_t id) const {
+    EmployeeTable EmployeeModel::fetchOne(size_t id) const {
         for (auto &it : db) {
             if (it.id() == id) {
                 return it;

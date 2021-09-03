@@ -17,7 +17,7 @@ namespace employ::custom::table {
 
         [[nodiscard]] size_t id() const;
 
-        [[nodiscard]] const string &createTime() const;
+        [[nodiscard]] string createTime() const;
 
     private:
         const size_t valId;

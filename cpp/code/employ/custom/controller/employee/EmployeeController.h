@@ -16,15 +16,15 @@ namespace employ::custom::controller {
 
     class EmployeeController {
     public:
-        const EmployeeTable &get(size_t id);
-
-        const vector<EmployeeTable> &all();
-
-        vector <EmployeeTable> hire();
-
-        vector <EmployeeTable> fire();
-
         static vector<int> salary(const vector<EmployeeTable> &employee);
+    public:
+        [[nodiscard]] EmployeeTable get(size_t id) const;
+
+        [[nodiscard]] vector<EmployeeTable> all() const;
+
+        [[nodiscard]] vector<EmployeeTable> hire() const;
+
+        [[nodiscard]] vector<EmployeeTable> fire() const;
 
         size_t insert(const string &empNo, const string &name,
                       const string &hire, const string &fire);

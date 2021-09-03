@@ -22,21 +22,22 @@ namespace employ::custom::table {
         EmployeeTable(string empNo, string name,
                       string hire, string fire);
 
-        [[nodiscard]] const string &empNo() const;
+        [[nodiscard]] string empNo() const;
 
         EmployeeTable &empNo(const string &empNo);
 
-        [[nodiscard]] const string &name() const;
+        [[nodiscard]] string name() const;
 
         EmployeeTable &name(const string &name);
 
-        [[nodiscard]] const string &hire() const;
+        [[nodiscard]] string hire() const;
 
         EmployeeTable &hire(const string &hire);
 
-        [[nodiscard]] const string &fire() const;
+        [[nodiscard]] string fire() const;
 
         EmployeeTable &fire(const string &fire);
+
     private:
         string valEmpNo;
         string valName;
