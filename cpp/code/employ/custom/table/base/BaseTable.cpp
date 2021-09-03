@@ -6,11 +6,11 @@
 
 namespace employ::custom::table {
 
-    table::BaseTable::BaseTable(int id) : valId{id} {
+    table::BaseTable::BaseTable(size_t id) : valId{id} {
 
     }
 
-    int BaseTable::id() const {
+    size_t BaseTable::id() const {
         return valId;
     }
 

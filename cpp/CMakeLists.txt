@@ -7,13 +7,6 @@ add_executable(cpp
         main.cpp
 
 
-        #
-        #        #        AmountModel
-        #        code/employ/custom/model/amount/AmountModel.h
-        #        code/employ/custom/model/amount/AmountModel.cpp
-        #        #        AmountModelTest
-        #        code/employ/custom/model/amount/AmountModelTest.h
-        #        code/employ/custom/model/amount/AmountModelTest.cpp
         #        #        EmployeeModel impl
         #        code/employ/custom/model/employee/EmployeeModel.cpp
         #        code/employ/custom/model/employee/EmployeeModel.h
@@ -68,6 +61,7 @@ add_executable(cpp
         code/utils/stream/StreamUtilsDriver.cpp
         code/utils/stream/StreamUtilsDriver.h
 
+        code/employ/custom/driver.h
         code/employ/custom/table/driver.h
         code/employ/custom/table/base/BaseTable.cpp
         code/employ/custom/table/base/BaseTable.h
@@ -83,4 +77,11 @@ add_executable(cpp
         code/employ/custom/table/employee/EmployeeTable.cpp
         code/employ/custom/table/employee/EmployeeTableDriver.cpp
         code/employ/custom/table/employee/EmployeeTableDriver.h
+        code/employ/custom/model/driver.h
+        code/employ/custom/model/amount/AmountModel.h
+        code/employ/custom/model/amount/AmountModel.cpp
+        code/employ/custom/model/amount/AmountModelTest.h
+        code/employ/custom/model/amount/AmountModelTest.cpp
+
+
         )

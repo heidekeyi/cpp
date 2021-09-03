@@ -2,8 +2,8 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_AMOUNTMODELTEST_H
-#define CPP_AMOUNTMODELTEST_H
+#pragma once
+
 namespace employ::custom::model {
     class AmountModelTest {
     public:
@@ -16,4 +16,4 @@ namespace employ::custom::model {
         AmountModelTest &insert();
     };
 }
-#endif //CPP_AMOUNTMODELTEST_H
+

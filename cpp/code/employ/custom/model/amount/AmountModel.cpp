@@ -4,5 +4,41 @@
 #include "AmountModel.h"
 
 namespace employ::custom::model {
-    vector<AmountTable> AmountModel::valDataBase;
+    vector<AmountTable> AmountModel::staticDataBase;
+
+    const AmountTable &AmountModel::fetchOne(size_t id) const {
+        for (auto &it : db) {
+            if (it.id() == id) {
+                return it;
+            }
+        }
+        throw "id of data is not exist";
+    }
+
+    const vector<AmountTable> &AmountModel::fetchAll() const {
+        return db;
+    }
+
+    int AmountModel::fetchSalary(int empId) {
+        return fetchSalary(vector<int>{empId})[0];
+    }
+
+    vector<int> AmountModel::fetchSalary(const vector<int> &vEmpIds) {
+        vector<int> v;
+        for (int id : vEmpIds) {
+            int sum = 0;
+            for (auto &it : db) {
+                if (it.empId() == id) {
+                    sum += it.amount();
+                }
+            }
+            v.push_back(sum);
+        }
+        return v;
+    }
+
+    size_t AmountModel::insert(const AmountTable &obj) {
+        db.push_back(obj);
+        return db.size() - 1;
+    }
 }

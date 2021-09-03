@@ -7,20 +7,20 @@
 #include <utility>
 
 namespace employ::custom::table {
-    int EmployeeTable::valCount{1};
+    size_t EmployeeTable::staticCount{1};
 
     void EmployeeTable::clearCount() {
-        EmployeeTable::valCount = 1;
+        EmployeeTable::staticCount = 1;
     }
 
     EmployeeTable::EmployeeTable(string empNo, string name,
                                  string hire, string fire) :
-            BaseTable{EmployeeTable::valCount},
+            BaseTable{EmployeeTable::staticCount},
             valEmpNo{std::move(empNo)},
             valName{std::move(name)},
             valHire{std::move(hire)},
             valFire{std::move(fire)} {
-        ++EmployeeTable::valCount;
+        ++EmployeeTable::staticCount;
     }
 
     const string &EmployeeTable::empNo() const {

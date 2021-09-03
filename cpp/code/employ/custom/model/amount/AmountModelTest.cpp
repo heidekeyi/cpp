@@ -7,21 +7,18 @@
 #include "AmountModel.h"
 #include <iostream>
 #include <vector>
+#include "../../table/TableDisplay.h"
 
 namespace employ::custom::model {
-    using employ::custom::table::AmountTable;
+    using namespace employ::custom::table;
     using std::cout, std::endl, std::vector;
 
     AmountModelTest &AmountModelTest::fetchOne() {
         AmountModel obj;
         obj.insert(AmountTable{6, 6000});
-        obj.insert(AmountTable{5, 5000});
+        auto index = obj.insert(AmountTable{15, 5555});
         obj.insert(AmountTable{4, 4000});
-        auto it = obj.fetchOne(6);
-        cout << "id: " << it.id()
-             << "\tempId: " << it.empId()
-             << "\tamount: " << it.amount()
-             << endl;
+        TableDisplay::amount(obj.fetchOne(index + 1));
         return *this;
     }
 
@@ -55,6 +52,7 @@ namespace employ::custom::model {
         cout << obj.insert(AmountTable{1, 1000}) << "\t"
              << obj.insert(AmountTable{3, 3000}) << "\t"
              << obj.insert(AmountTable{2, 2000}) << endl;
+        TableDisplay::amount(obj.fetchAll());
         return *this;
     }
 }

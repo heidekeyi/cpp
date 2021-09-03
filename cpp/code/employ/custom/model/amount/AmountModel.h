@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/8/31.
 //
 
-#ifndef CPP_AMOUNTMODEL_H
-#define CPP_AMOUNTMODEL_H
+#pragma once
 
 #include "../../table/amount/AmountTable.h"
 #include <vector>
@@ -14,43 +13,20 @@ namespace employ::custom::model {
 
     class AmountModel {
     private:
-        static vector<AmountTable> valDataBase;
+        static vector<AmountTable> staticDataBase;
     public:
-        [[nodiscard]] const auto &fetchAll() const {
-            return db;
-        }
+        [[nodiscard]] const AmountTable &fetchOne(size_t id) const;
 
-        [[nodiscard]] const auto &fetchOne(int id) const {
-            for (auto &it : db) {
-                if (it.id() == id) {
-                    return it;
-                }
-            }
-            throw "amountController of relate id is not exist";
-        }
+        [[nodiscard]] const vector<AmountTable> &fetchAll() const;
 
-        size_t insert(const AmountTable &item) {
-            db.push_back(item);
-            return db.size() - 1;
-        }
+        int fetchSalary(int empId);
 
-        auto fetchSalary(const vector<int> &vec) {
-            vector<int> v;
-            for (int id : vec) {
-                int sum = 0;
-                for (auto &it : db) {
-                    if (it.empId() == id) {
-                        sum += it.amount();
-                    }
-                }
-                v.push_back(sum);
-            }
-            return v;
-        }
+        vector<int> fetchSalary(const vector<int> &vEmpIds);
+
+        size_t insert(const AmountTable &obj);
 
     private:
-        vector<AmountTable> &db{AmountModel::valDataBase};
+        vector<AmountTable> &db{AmountModel::staticDataBase};
     };
 }
 
-#endif //CPP_AMOUNTMODEL_H

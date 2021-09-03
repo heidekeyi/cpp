@@ -13,7 +13,7 @@ namespace employ::custom::table {
 
     class EmployeeTable : public BaseTable {
     private:
-        static int valCount;
+        static size_t staticCount;
     public:
     public:
         static void clearCount();

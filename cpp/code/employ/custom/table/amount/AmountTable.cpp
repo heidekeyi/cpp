@@ -5,23 +5,23 @@
 #include "AmountTable.h"
 
 namespace employ::custom::table {
-    int AmountTable::valCount{1};
+    size_t AmountTable::staticCount{1};
 
     void AmountTable::clearCount() {
-        AmountTable::valCount = 1;
+        AmountTable::staticCount = 1;
     }
 
-    AmountTable::AmountTable(int empId, int amount)
-            : BaseTable{AmountTable::valCount},
+    AmountTable::AmountTable(size_t empId, int amount)
+            : BaseTable{AmountTable::staticCount},
               valEmpId{empId}, valAmount{amount} {
-        ++AmountTable::valCount;
+        ++AmountTable::staticCount;
     }
 
-    int AmountTable::empId() const {
+    size_t AmountTable::empId() const {
         return valEmpId;
     }
 
-    AmountTable &AmountTable::empId(int empId) {
+    AmountTable &AmountTable::empId(size_t empId) {
         valEmpId = empId;
         return *this;
     }

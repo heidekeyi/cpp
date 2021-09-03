@@ -9,23 +9,23 @@
 namespace employ::custom::table {
     class AmountTable : public BaseTable {
     private:
-        static int valCount;
+        static size_t staticCount;
     public:
         static void clearCount();
 
     public:
-        AmountTable(int empId, int amount);
+        AmountTable(size_t empId, int amount);
 
-        [[nodiscard]] int empId() const;
+        [[nodiscard]] size_t empId() const;
 
-        AmountTable &empId(int empId);
+        AmountTable &empId(size_t empId);
 
         [[nodiscard]] int amount() const;
 
         AmountTable &amount(int value);
 
     private:
-        int valEmpId;
+        size_t valEmpId;
         int valAmount;
     };
 

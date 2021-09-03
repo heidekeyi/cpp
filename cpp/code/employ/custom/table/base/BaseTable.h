@@ -13,14 +13,14 @@ namespace employ::custom::table {
 
     class BaseTable {
     public:
-        explicit BaseTable(int id);
+        explicit BaseTable(size_t id);
 
-        [[nodiscard]] int id() const;
+        [[nodiscard]] size_t id() const;
 
         [[nodiscard]] const string &createTime() const;
 
     private:
-        const int valId;
+        const size_t valId;
         const string valCreateTime{TimeUtils::datetime()};
     };
 }
