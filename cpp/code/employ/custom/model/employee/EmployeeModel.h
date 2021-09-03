@@ -16,23 +16,18 @@ namespace employ::custom::model {
     private:
         static vector<EmployeeTable> valDataBase;
     public:
-        [[nodiscard]] const auto &fetchAll() const {
-            return db;
-        }
+        [[nodiscard]] const vector<EmployeeTable> &fetchAll() const;
 
-        [[nodiscard]] const auto &fetchOne(int id) const {
-            for (auto &it : db) {
-                if (it.id() == id) {
-                    return it;
-                }
-            }
-            throw "employeeUI of relate id is not exist";
-        }
+        [[nodiscard]] const EmployeeTable &fetchOne(int id) const;
 
-        size_t insert(const EmployeeTable &item) {
-            db.push_back(item);
-            return db.size() - 1;
-        }
+        size_t insert(const EmployeeTable &item);
+
+        [[nodiscard]] vector<EmployeeTable> fetchFire() const;
+
+        [[nodiscard]] vector<EmployeeTable> fetchHire() const;
+
+    private:
+        static bool isFireTimeEmpty(const EmployeeTable &item);
 
     private:
         vector<EmployeeTable> &db{EmployeeModel::valDataBase};

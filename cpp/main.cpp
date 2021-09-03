@@ -1,11 +1,7 @@
-#include "code/utils/test/TestUtils.h"
-#include "code/employ/custom/test/TestCustom.h"
-#include "code/employ/custom/app/AppCustom.h"
+#include "code/utils/driver.h"
 
 int main() {
-//    utils::TestUtils{}.streamUtils();
-    employ::custom::TestCustom{}.testController();
-//    employ::custom::AppCustom{}.start();
+    utils::driver();
     return 0;
 }
 

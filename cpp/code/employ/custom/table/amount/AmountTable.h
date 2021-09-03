@@ -12,27 +12,24 @@ namespace employ::custom::table {
     private:
         static int valCount;
     public:
-        AmountTable(int empId, int amount) : valEmpId{empId}, valAmount{amount},
-                                             BaseTable(AmountTable::valCount++) {}
+        static void clearCount();
 
-        [[nodiscard]] auto empId() const { return valEmpId; }
+    public:
+        AmountTable(int empId, int amount);
 
-        [[nodiscard]] auto amount() const { return valAmount; }
+        [[nodiscard]] int empId() const;
 
-        auto empId(int empId) {
-            valEmpId = empId;
-            return *this;
-        }
+        AmountTable &empId(int empId);
 
-        auto amount(int amount) {
-            valAmount = amount;
-            return *this;
-        }
+        [[nodiscard]] int amount() const;
+
+        AmountTable &amount(int value);
 
     private:
         int valEmpId;
         int valAmount;
     };
+
 
 }
 #endif //CPP_AMOUNTTABLE_H

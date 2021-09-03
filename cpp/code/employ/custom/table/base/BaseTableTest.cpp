@@ -4,20 +4,17 @@
 
 #include "BaseTableTest.h"
 #include "BaseTable.h"
-#include <iostream>
+#include "../TableDisplay.h"
 
 namespace employ::custom::table {
-    using std::cout, std::endl;
 
     BaseTableTest &BaseTableTest::id() {
-        BaseTable base{100};
-        cout << "id: " << base.id() << endl;
+        TableDisplay::base(BaseTable{100});
         return *this;
     }
 
     BaseTableTest &BaseTableTest::createTime() {
-        BaseTable base{100};
-        cout << "createTime: " << base.createTime() << endl;
+        TableDisplay::base(BaseTable{100});
         return *this;
     }
 }

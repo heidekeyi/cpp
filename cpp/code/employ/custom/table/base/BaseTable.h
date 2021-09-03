@@ -10,18 +10,19 @@
 
 namespace employ::custom::table {
     using utils::TimeUtils;
+    using std::string;
 
     class BaseTable {
     public:
-        explicit BaseTable(int id) : valId{id} {}
+        explicit BaseTable(int id);
 
-        [[nodiscard]] auto id() const { return valId; }
+        [[nodiscard]] int id() const;
 
-        [[nodiscard]] const auto &createTime() const { return valCreateTime; }
+        [[nodiscard]] const string &createTime() const;
 
     private:
-        int valId;
-        std::string valCreateTime{TimeUtils::nowDatetime()};
+        const int valId;
+        const string valCreateTime{TimeUtils::nowDatetime()};
     };
 }
 

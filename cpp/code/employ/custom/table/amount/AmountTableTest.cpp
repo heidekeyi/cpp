@@ -26,6 +26,11 @@ namespace employ::custom::table {
         return *this;
     }
 
+    AmountTableTest &AmountTableTest::clearCount() {
+        AmountTable::clearCount();
+        return *this;
+    }
+
     static void display(const AmountTable &obj) {
         using std::cout, std::endl;
         cout << "id: " << obj.id()

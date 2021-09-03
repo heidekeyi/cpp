@@ -10,6 +10,8 @@ namespace employ::custom::table {
         AmountTableTest &empId();
 
         AmountTableTest &amount();
+
+        AmountTableTest &clearCount();
     };
 }
 #endif //CPP_AMOUNTTABLETEST_H
