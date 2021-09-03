@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include "../../table/TableDisplay.h"
+#include "../ModelDisplay.h"
 
 namespace employ::custom::model {
     using namespace employ::custom::table;
@@ -27,7 +28,7 @@ namespace employ::custom::model {
         obj.insert(AmountTable{7, 7000});
         obj.insert(AmountTable{9, 9000});
         obj.insert(AmountTable{8, 8000});
-        cout << "size: " << obj.fetchAll().size() << endl;
+        TableDisplay::amount(obj.fetchAll());
         return *this;
     }
 
@@ -39,11 +40,8 @@ namespace employ::custom::model {
         obj.insert(AmountTable{22, 1000});
         obj.insert(AmountTable{33, 9000});
         obj.insert(AmountTable{11, 300});
-        vector<int> vid{11, 22, 33};
-        auto vSalary = obj.fetchSalary(vid);
-        for (int i = 0; i < vid.size(); ++i) {
-            cout << vid[i] << ": " << vSalary[i] << endl;
-        }
+        vector<size_t> v{11, 22, 33, 3, 9};
+        ModelDisplay::salary(v, obj.fetchSalary(v));
         return *this;
     }
 

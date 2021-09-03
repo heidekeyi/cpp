@@ -19,9 +19,9 @@ namespace employ::custom::model {
 
         [[nodiscard]] const vector<AmountTable> &fetchAll() const;
 
-        int fetchSalary(int empId);
+        int fetchSalary(size_t empId);
 
-        vector<int> fetchSalary(const vector<int> &vEmpIds);
+        vector<int> fetchSalary(const vector <size_t> &vEmpId);
 
         size_t insert(const AmountTable &obj);
 

@@ -19,13 +19,13 @@ namespace employ::custom::model {
         return db;
     }
 
-    int AmountModel::fetchSalary(int empId) {
-        return fetchSalary(vector<int>{empId})[0];
+    int AmountModel::fetchSalary(size_t empId) {
+        return fetchSalary(vector<size_t>{empId})[0];
     }
 
-    vector<int> AmountModel::fetchSalary(const vector<int> &vEmpIds) {
+    vector<int> AmountModel::fetchSalary(const vector<size_t> &vEmpIds) {
         vector<int> v;
-        for (int id : vEmpIds) {
+        for (auto id : vEmpIds) {
             int sum = 0;
             for (auto &it : db) {
                 if (it.empId() == id) {
@@ -39,6 +39,6 @@ namespace employ::custom::model {
 
     size_t AmountModel::insert(const AmountTable &obj) {
         db.push_back(obj);
-        return db.size() - 1;
+        return obj.id();
     }
 }
