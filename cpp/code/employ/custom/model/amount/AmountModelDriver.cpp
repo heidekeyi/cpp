@@ -2,7 +2,7 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#include "AmountModelTest.h"
+#include "AmountModelDriver.h"
 #include "../../table/amount/AmountTable.h"
 #include "AmountModel.h"
 #include <iostream>
@@ -14,7 +14,7 @@ namespace employ::custom::model {
     using namespace employ::custom::table;
     using std::cout, std::endl, std::vector;
 
-    AmountModelTest &AmountModelTest::fetchOne() {
+    AmountModelDriver &AmountModelDriver::fetchOne() {
         AmountModel obj;
         obj.insert(AmountTable{6, 6000});
         auto index = obj.insert(AmountTable{15, 5555});
@@ -23,7 +23,7 @@ namespace employ::custom::model {
         return *this;
     }
 
-    AmountModelTest &AmountModelTest::fetchAll() {
+    AmountModelDriver &AmountModelDriver::fetchAll() {
         AmountModel obj;
         obj.insert(AmountTable{7, 7000});
         obj.insert(AmountTable{9, 9000});
@@ -32,7 +32,7 @@ namespace employ::custom::model {
         return *this;
     }
 
-    AmountModelTest &AmountModelTest::fetchSalary() {
+    AmountModelDriver &AmountModelDriver::fetchSalary() {
         AmountModel obj;
         obj.insert(AmountTable{22, 1000});
         obj.insert(AmountTable{11, 1000});
@@ -45,7 +45,7 @@ namespace employ::custom::model {
         return *this;
     }
 
-    AmountModelTest &AmountModelTest::insert() {
+    AmountModelDriver &AmountModelDriver::insert() {
         AmountModel obj;
         cout << obj.insert(AmountTable{1, 1000}) << "\t"
              << obj.insert(AmountTable{3, 3000}) << "\t"

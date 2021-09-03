@@ -47,8 +47,8 @@ add_executable(cpp
         #        code/employ/custom/controller/amount/AmountControllerTest.h
         #        code/employ/custom/controller/employee/EmployeeControllerTest.cpp
         #        code/employ/custom/controller/employee/EmployeeControllerTest.h
+        code/driver.h
 
-        code/utils/driver.h
         code/utils/display/DisplayUtils.h
         code/utils/display/DisplayUtilsDriver.cpp
         code/utils/display/DisplayUtilsDriver.h
@@ -61,8 +61,7 @@ add_executable(cpp
         code/utils/stream/StreamUtilsDriver.cpp
         code/utils/stream/StreamUtilsDriver.h
 
-        code/employ/custom/driver.h
-        code/employ/custom/table/driver.h
+
         code/employ/custom/table/base/BaseTable.cpp
         code/employ/custom/table/base/BaseTable.h
         code/employ/custom/table/base/BaseTableDriver.cpp
@@ -77,11 +76,10 @@ add_executable(cpp
         code/employ/custom/table/employee/EmployeeTable.cpp
         code/employ/custom/table/employee/EmployeeTableDriver.cpp
         code/employ/custom/table/employee/EmployeeTableDriver.h
-        code/employ/custom/model/driver.h
         code/employ/custom/model/amount/AmountModel.h
         code/employ/custom/model/amount/AmountModel.cpp
-        code/employ/custom/model/amount/AmountModelTest.h
-        code/employ/custom/model/amount/AmountModelTest.cpp
-
-
-        code/employ/custom/model/ModelDisplay.cpp code/employ/custom/model/ModelDisplay.h)
+        code/employ/custom/model/amount/AmountModelDriver.h
+        code/employ/custom/model/amount/AmountModelDriver.cpp
+        code/employ/custom/model/ModelDisplay.cpp
+        code/employ/custom/model/ModelDisplay.h
+        )
