@@ -14,6 +14,7 @@
 #include "employ/custom/model/amount/AmountModelDriver.h"
 #include "employ/custom/model/employee/EmployeeModelDriver.h"
 #include "employ/custom/controller/amount/AmountControllerDriver.h"
+#include "employ/custom/controller/employee/EmployeeControllerDriver.h"
 
 void driver() {
 //    utils::DisplayUtilsDriver{}
@@ -51,10 +52,17 @@ void driver() {
 //            .fetchAll()
 //            .fetchHire()
 //            .fetchFire();
-    employ::custom::controller::AmountControllerDriver{}
+//    employ::custom::controller::AmountControllerDriver{}
+//            .insert()
+//            .get()
+//            .salary();
+    employ::custom::controller::EmployeeControllerDriver{}
             .insert()
             .get()
-            .salary();
+            .salary()
+            .all()
+            .hire()
+            .fire();
 }
 
 

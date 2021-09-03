@@ -26,15 +26,15 @@ add_executable(cpp
         #        code/employ/custom/ui/employee/EmployeeUITest.cpp
         #        code/employ/custom/ui/employee/EmployeeUITest.h
         #        #        AllUI impl
-        #        code/employ/custom/ui/all/AllUI.cpp
-        #        code/employ/custom/ui/all/AllUI.h
+        #        code/employ/custom/ui/get/AllUI.cpp
+        #        code/employ/custom/ui/get/AllUI.h
         #
 
 
         #        code/employ/custom/controller/amount/AmountControllerDriver.cpp
         #        code/employ/custom/controller/amount/AmountControllerDriver.h
-        #        code/employ/custom/controller/employee/EmployeeControllerTest.cpp
-        #        code/employ/custom/controller/employee/EmployeeControllerTest.h
+        #        code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
+        #        code/employ/custom/controller/employee/EmployeeControllerDriver.h
         code/driver.h
 
         code/utils/display/DisplayUtils.h
@@ -81,6 +81,7 @@ add_executable(cpp
         code/employ/custom/controller/amount/AmountControllerDriver.h
         code/employ/custom/controller/employee/EmployeeController.cpp
         code/employ/custom/controller/employee/EmployeeController.h
-
+        code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
+        code/employ/custom/controller/employee/EmployeeControllerDriver.h
 
         )

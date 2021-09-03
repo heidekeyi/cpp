@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/8/31.
 //
 
-#ifndef CPP_EMPLOYEECONTROLLER_H
-#define CPP_EMPLOYEECONTROLLER_H
+#pragma once
 
 #include "../../table/employee/EmployeeTable.h"
 #include "../../model/employee/EmployeeModel.h"
@@ -17,19 +16,22 @@ namespace employ::custom::controller {
 
     class EmployeeController {
     public:
-        const EmployeeTable &get(int id);
+        const EmployeeTable &get(size_t id);
 
-        const vector<EmployeeTable> &get();
+        const vector<EmployeeTable> &all();
 
-        vector<int> salary(const vector<EmployeeTable> &employee);
+        vector <EmployeeTable> hire();
 
-        int insert(const string &empNo, const string &name,
-                   const string &hire, const string &fire);
+        vector <EmployeeTable> fire();
+
+        static vector<int> salary(const vector<EmployeeTable> &employee);
+
+        size_t insert(const string &empNo, const string &name,
+                      const string &hire, const string &fire);
 
     private:
         EmployeeModel model{};
     };
-
 }
 
-#endif //CPP_EMPLOYEECONTROLLER_H
+
