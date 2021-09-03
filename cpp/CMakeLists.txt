@@ -7,11 +7,6 @@ add_executable(cpp
         main.cpp
 
 
-        #        code/employ/custom/table/employee/EmployeeTable.h
-        #        code/employ/custom/table/employee/EmployeeTable.cpp
-        #        #        EmployeeTableTest
-        #        code/employ/custom/table/employee/EmployeeTableTest.cpp
-        #        code/employ/custom/table/employee/EmployeeTableTest.h
         #
         #        #        AmountModel
         #        code/employ/custom/model/amount/AmountModel.h
@@ -82,6 +77,10 @@ add_executable(cpp
         code/employ/custom/table/TableDisplay.h
         code/employ/custom/table/amount/AmountTable.cpp
         code/employ/custom/table/amount/AmountTable.h
-        code/employ/custom/table/amount/AmountTableTest.cpp
-        code/employ/custom/table/amount/AmountTableTest.h
+        code/employ/custom/table/amount/AmountTableDriver.cpp
+        code/employ/custom/table/amount/AmountTableDriver.h
+#        code/employ/custom/table/employee/EmployeeTable.h
+#        code/employ/custom/table/employee/EmployeeTable.cpp
+#        code/employ/custom/table/employee/EmployeeTableTest.cpp
+#        code/employ/custom/table/employee/EmployeeTableTest.h
         )
