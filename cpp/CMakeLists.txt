@@ -70,11 +70,12 @@ add_executable(cpp
         code/employ/custom/menu/all/AllMenu.h
         code/employ/custom/menu/all/AllMenuDriver.cpp
         code/employ/custom/menu/all/AllMenuDriver.h
-        #        #        EmployeeUI impl
-        #        code/employ/custom/menu/employee/EmployeeUI.cpp
-        #        code/employ/custom/menu/employee/EmployeeUI.h
-        #        #        EmployeeUITest test
-        #        code/employ/custom/menu/employee/EmployeeUITest.cpp
-        #        code/employ/custom/menu/employee/EmployeeUITest.h
-
+        code/employ/custom/menu/hire/HireMenu.cpp
+        code/employ/custom/menu/hire/HireMenu.h
+        code/employ/custom/menu/hire/HireMenuDriver.cpp
+        code/employ/custom/menu/hire/HireMenuDriver.h
+        code/employ/custom/menu/fire/FireMenu.cpp
+        code/employ/custom/menu/fire/FireMenu.h
+        code/employ/custom/menu/fire/FireMenuDriver.cpp
+        code/employ/custom/menu/fire/FireMenuDriver.h
         )

@@ -6,6 +6,8 @@
 #include <iostream>
 #include "../../../utils/stream/StreamUtils.h"
 #include "../menu/all/AllMenu.h"
+#include "../menu/fire/FireMenu.h"
+#include "../menu/hire/HireMenu.h"
 
 namespace employ::custom {
     using namespace employ::custom::menu;
@@ -35,6 +37,8 @@ namespace employ::custom {
 
     AppCustom &AppCustom::initMenu() {
         vMenu.push_back(new AllMenu);
+        vMenu.push_back(new HireMenu);
+        vMenu.push_back(new FireMenu);
         vMenu.push_back(quitMenu);
         return *this;
     }
