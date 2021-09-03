@@ -8,11 +8,11 @@
 #include <vector>
 #include "../table/employee/EmployeeTable.h"
 
-namespace employ::custom::ui {
+namespace employ::custom::menu {
     using employ::custom::table::EmployeeTable;
     using std::vector;
 
-    class UIDisplay {
+    class MenuDisplay {
     public:
         static void employee(const vector<EmployeeTable> &vEmp, const vector<int> &vSalary);
     };

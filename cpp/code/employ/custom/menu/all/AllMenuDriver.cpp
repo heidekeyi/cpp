@@ -2,21 +2,21 @@
 // Created by 12131 on 2021/9/3.
 //
 
-#include "AllUIDriver.h"
-#include "AllUI.h"
+#include "AllMenuDriver.h"
+#include "AllMenu.h"
 #include "../../controller/amount/AmountController.h"
 #include "../../controller/employee/EmployeeController.h"
 
-namespace employ::custom::ui {
+namespace employ::custom::menu {
     using namespace employ::custom::controller;
     using utils::TimeUtils;
 
-    AllUIDriver &AllUIDriver::displayMenu() {
-        AllUI{}.displayMenu();
+    AllMenuDriver &AllMenuDriver::display() {
+        AllMenu{}.display();
         return *this;
     }
 
-    AllUIDriver &AllUIDriver::action() {
+    AllMenuDriver &AllMenuDriver::action() {
         EmployeeController e;
         AmountController a;
         auto now = TimeUtils::datetime();
@@ -31,7 +31,7 @@ namespace employ::custom::ui {
         a.insert(2, -1500);
         a.insert(1, 3000);
         a.insert(3, 800);
-        AllUI{}.action();
+        AllMenu{}.action();
         return *this;
     }
 }

@@ -59,22 +59,22 @@ add_executable(cpp
         code/employ/custom/app/AppCustom.h
 
 
-        code/employ/custom/ui/UIDisplay.cpp
-        code/employ/custom/ui/UIDisplay.h
-        code/employ/custom/ui/base/BaseUI.h
-        code/employ/custom/ui/quit/QuitUI.cpp
-        code/employ/custom/ui/quit/QuitUI.h
-        code/employ/custom/ui/quit/QuitUIDriver.cpp
-        code/employ/custom/ui/quit/QuitUIDriver.h
-        code/employ/custom/ui/all/AllUI.cpp
-        code/employ/custom/ui/all/AllUI.h
-        code/employ/custom/ui/all/AllUIDriver.cpp
-        code/employ/custom/ui/all/AllUIDriver.h
+        code/employ/custom/menu/MenuDisplay.cpp
+        code/employ/custom/menu/MenuDisplay.h
+        code/employ/custom/menu/base/BaseMenu.h
+        code/employ/custom/menu/quit/QuitMenu.cpp
+        code/employ/custom/menu/quit/QuitMenu.h
+        code/employ/custom/menu/quit/QuitMenuDriver.cpp
+        code/employ/custom/menu/quit/QuitMenuDriver.h
+        code/employ/custom/menu/all/AllMenu.cpp
+        code/employ/custom/menu/all/AllMenu.h
+        code/employ/custom/menu/all/AllMenuDriver.cpp
+        code/employ/custom/menu/all/AllMenuDriver.h
         #        #        EmployeeUI impl
-        #        code/employ/custom/ui/employee/EmployeeUI.cpp
-        #        code/employ/custom/ui/employee/EmployeeUI.h
+        #        code/employ/custom/menu/employee/EmployeeUI.cpp
+        #        code/employ/custom/menu/employee/EmployeeUI.h
         #        #        EmployeeUITest test
-        #        code/employ/custom/ui/employee/EmployeeUITest.cpp
-        #        code/employ/custom/ui/employee/EmployeeUITest.h
+        #        code/employ/custom/menu/employee/EmployeeUITest.cpp
+        #        code/employ/custom/menu/employee/EmployeeUITest.h
 
         )

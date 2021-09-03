@@ -2,28 +2,28 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#include "QuitUIDriver.h"
-#include "QuitUI.h"
+#include "QuitMenuDriver.h"
+#include "QuitMenu.h"
 #include <iostream>
 
-namespace employ::custom::ui {
+namespace employ::custom::menu {
     using std::cout, std::endl;
 
-    QuitUIDriver &QuitUIDriver::quitStatus() {
-        cout << QuitUI{}.quitStatus() << endl;
+    QuitMenuDriver &QuitMenuDriver::quitStatus() {
+        cout << QuitMenu{}.quitStatus() << endl;
         return *this;
     }
 
-    QuitUIDriver &QuitUIDriver::action() {
-        QuitUI obj{};
+    QuitMenuDriver &QuitMenuDriver::action() {
+        QuitMenu obj{};
         cout << "action before: " << obj.quitStatus() << endl;
         obj.action();
         cout << "action after: " << obj.quitStatus() << endl;
         return *this;
     }
 
-    QuitUIDriver &QuitUIDriver::displayMenu() {
-        QuitUI{}.displayMenu();
+    QuitMenuDriver &QuitMenuDriver::display() {
+        QuitMenu{}.display();
         return *this;
     }
 }

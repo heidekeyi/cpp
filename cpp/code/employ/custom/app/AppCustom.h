@@ -4,17 +4,17 @@
 
 #pragma once
 
-#include "../ui/quit/QuitUI.h"
+#include "../menu/quit/QuitMenu.h"
 #include <vector>
 
 namespace employ::custom {
-    using namespace employ::custom::ui;
+    using namespace employ::custom::menu;
     using std::vector;
 
     class AppCustom {
     public:
         ~AppCustom() {
-            for (auto it : vUI) {
+            for (auto it : vMenu) {
                 delete it;
             }
         }
@@ -22,11 +22,11 @@ namespace employ::custom {
         void start();
 
     private:
-        AppCustom &initUI();
+        AppCustom &initMenu();
 
     private:
-        vector<BaseUI *> vUI;
-        QuitUI *quitUi{new QuitUI};
+        vector<BaseMenu *> vMenu;
+        QuitMenu *quitMenu{new QuitMenu};
     };
 }
 

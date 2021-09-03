@@ -5,37 +5,37 @@
 #include "AppCustom.h"
 #include <iostream>
 #include "../../../utils/stream/StreamUtils.h"
-#include "../ui/all/AllUI.h"
+#include "../menu/all/AllMenu.h"
 
 namespace employ::custom {
-    using namespace employ::custom::ui;
+    using namespace employ::custom::menu;
     using std::cout, std::endl;
     using utils::StreamUtils;
 
     void AppCustom::start() {
-        if (vUI.empty()) {
-            initUI();
+        if (vMenu.empty()) {
+            initMenu();
         }
         do {
-            for (int i = 0; i < vUI.size(); ++i) {
+            for (int i = 0; i < vMenu.size(); ++i) {
                 cout << i + 1 << ") ";
-                vUI[i]->displayMenu();
+                vMenu[i]->display();
             }
             cout << "please select menu id:\t";
             size_t val = StreamUtils::intValue() - 1;
             StreamUtils::clear();
-            if (val >= vUI.size()) {
+            if (val >= vMenu.size()) {
                 cout << "id is invalid" << endl;
             } else {
-                vUI[val]->action();
+                vMenu[val]->action();
             }
-        } while (!quitUi->quitStatus());
+        } while (!quitMenu->quitStatus());
         cout << "good bye!" << endl;
     }
 
-    AppCustom &AppCustom::initUI() {
-        vUI.push_back(new AllUI);
-        vUI.push_back(quitUi);
+    AppCustom &AppCustom::initMenu() {
+        vMenu.push_back(new AllMenu);
+        vMenu.push_back(quitMenu);
         return *this;
     }
 }

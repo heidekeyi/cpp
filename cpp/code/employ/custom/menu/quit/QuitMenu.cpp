@@ -2,21 +2,21 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#include "QuitUI.h"
+#include "QuitMenu.h"
 #include <iostream>
 
-namespace employ::custom::ui {
+namespace employ::custom::menu {
     using std::cout, std::endl;
 
-    void QuitUI::action() {
+    void QuitMenu::action() {
         valQuitStatus = true;
     }
 
-    void QuitUI::displayMenu() {
+    void QuitMenu::display() {
         cout << "quit (stop application)" << endl;
     }
 
-    bool QuitUI::quitStatus() const {
+    bool QuitMenu::quitStatus() const {
         return valQuitStatus;
     }
 }

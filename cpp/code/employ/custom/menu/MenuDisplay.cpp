@@ -2,15 +2,15 @@
 // Created by 12131 on 2021/9/3.
 //
 
-#include "UIDisplay.h"
+#include "MenuDisplay.h"
 #include <iostream>
 #include "../../../utils/display/DisplayUtils.h"
 
-namespace employ::custom::ui {
+namespace employ::custom::menu {
     using std::cout, std::endl;
     using utils::DisplayUtils;
 
-    void UIDisplay::employee(const vector<EmployeeTable> &vEmp, const vector<int> &vSalary) {
+    void MenuDisplay::employee(const vector<EmployeeTable> &vEmp, const vector<int> &vSalary) {
         auto align = DisplayUtils::left();
         auto wId = DisplayUtils::width(6);
         auto wTime = DisplayUtils::width(21);

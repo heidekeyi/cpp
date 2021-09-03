@@ -4,12 +4,12 @@
 
 #pragma once
 
-#include "../base/BaseUI.h"
+#include "../base/BaseMenu.h"
 
-namespace employ::custom::ui {
-    class QuitUI : public BaseUI {
+namespace employ::custom::menu {
+    class QuitMenu : public BaseMenu {
     public:
-        void displayMenu() override;
+        void display() override;
 
         void action() override;
 
