@@ -12,6 +12,7 @@
 #include "employ/custom/table/amount/AmountTableDriver.h"
 #include "employ/custom/table/employee/EmployeeTableDriver.h"
 #include "employ/custom/model/amount/AmountModelDriver.h"
+#include "employ/custom/model/employee/EmployeeModelDriver.h"
 
 void driver() {
 //    utils::DisplayUtilsDriver{}
@@ -43,6 +44,12 @@ void driver() {
 //            .fetchOne()
 //            .fetchAll()
 //            .fetchSalary();
+    employ::custom::model::EmployeeModelDriver{}
+            .insert()
+            .fetchOne()
+            .fetchAll()
+            .fetchHire()
+            .fetchFire();
 }
 
 

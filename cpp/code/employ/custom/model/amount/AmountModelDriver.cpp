@@ -17,9 +17,9 @@ namespace employ::custom::model {
     AmountModelDriver &AmountModelDriver::fetchOne() {
         AmountModel obj;
         obj.insert(AmountTable{6, 6000});
-        auto index = obj.insert(AmountTable{15, 5555});
+        auto id = obj.insert(AmountTable{15, 5555});
         obj.insert(AmountTable{4, 4000});
-        TableDisplay::amount(obj.fetchOne(index + 1));
+        TableDisplay::amount(obj.fetchOne(id));
         return *this;
     }
 

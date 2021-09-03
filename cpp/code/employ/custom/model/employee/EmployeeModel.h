@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_EMPLOYEEMODEL_H
-#define CPP_EMPLOYEEMODEL_H
+#pragma once
 
 #include "../../table/employee/EmployeeTable.h"
 #include <vector>
@@ -18,19 +17,16 @@ namespace employ::custom::model {
     public:
         [[nodiscard]] const vector<EmployeeTable> &fetchAll() const;
 
-        [[nodiscard]] const EmployeeTable &fetchOne(int id) const;
+        [[nodiscard]] const EmployeeTable &fetchOne(size_t id) const;
 
-        size_t insert(const EmployeeTable &item);
+        size_t insert(const EmployeeTable &obj);
 
         [[nodiscard]] vector<EmployeeTable> fetchFire() const;
 
         [[nodiscard]] vector<EmployeeTable> fetchHire() const;
 
     private:
-        static bool isFireTimeEmpty(const EmployeeTable &item);
-
-    private:
         vector<EmployeeTable> &db{EmployeeModel::valDataBase};
     };
 }
-#endif //CPP_EMPLOYEEMODEL_H
+
