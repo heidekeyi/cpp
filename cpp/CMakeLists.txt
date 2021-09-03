@@ -29,15 +29,10 @@ add_executable(cpp
         #        code/employ/custom/ui/all/AllUI.cpp
         #        code/employ/custom/ui/all/AllUI.h
         #
-        #        #        AmountController impl
-        #        code/employ/custom/controller/amount/AmountController.h
-        #        code/employ/custom/controller/amount/AmountController.cpp
-        #        #        EmployeeController impl
-        #        code/employ/custom/controller/employee/EmployeeController.h
-        #        code/employ/custom/controller/employee/EmployeeController.cpp
-        #
-        #        code/employ/custom/controller/amount/AmountControllerTest.cpp
-        #        code/employ/custom/controller/amount/AmountControllerTest.h
+
+
+        #        code/employ/custom/controller/amount/AmountControllerDriver.cpp
+        #        code/employ/custom/controller/amount/AmountControllerDriver.h
         #        code/employ/custom/controller/employee/EmployeeControllerTest.cpp
         #        code/employ/custom/controller/employee/EmployeeControllerTest.h
         code/driver.h
@@ -54,13 +49,12 @@ add_executable(cpp
         code/utils/stream/StreamUtilsDriver.cpp
         code/utils/stream/StreamUtilsDriver.h
 
-
+        code/employ/custom/table/TableDisplay.cpp
+        code/employ/custom/table/TableDisplay.h
         code/employ/custom/table/base/BaseTable.cpp
         code/employ/custom/table/base/BaseTable.h
         code/employ/custom/table/base/BaseTableDriver.cpp
         code/employ/custom/table/base/BaseTableDriver.h
-        code/employ/custom/table/TableDisplay.cpp
-        code/employ/custom/table/TableDisplay.h
         code/employ/custom/table/amount/AmountTable.cpp
         code/employ/custom/table/amount/AmountTable.h
         code/employ/custom/table/amount/AmountTableDriver.cpp
@@ -70,15 +64,23 @@ add_executable(cpp
         code/employ/custom/table/employee/EmployeeTableDriver.cpp
         code/employ/custom/table/employee/EmployeeTableDriver.h
 
+        code/employ/custom/model/ModelDisplay.cpp
+        code/employ/custom/model/ModelDisplay.h
         code/employ/custom/model/amount/AmountModel.h
         code/employ/custom/model/amount/AmountModel.cpp
         code/employ/custom/model/amount/AmountModelDriver.h
         code/employ/custom/model/amount/AmountModelDriver.cpp
-        code/employ/custom/model/ModelDisplay.cpp
-        code/employ/custom/model/ModelDisplay.h
         code/employ/custom/model/employee/EmployeeModel.cpp
         code/employ/custom/model/employee/EmployeeModel.h
         code/employ/custom/model/employee/EmployeeModelDriver.cpp
         code/employ/custom/model/employee/EmployeeModelDriver.h
+
+        code/employ/custom/controller/amount/AmountController.cpp
+        code/employ/custom/controller/amount/AmountController.h
+        code/employ/custom/controller/amount/AmountControllerDriver.cpp
+        code/employ/custom/controller/amount/AmountControllerDriver.h
+        code/employ/custom/controller/employee/EmployeeController.cpp
+        code/employ/custom/controller/employee/EmployeeController.h
+
 
         )

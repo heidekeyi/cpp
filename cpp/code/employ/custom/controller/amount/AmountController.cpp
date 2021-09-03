@@ -7,7 +7,7 @@
 
 namespace employ::custom::controller {
 
-    const AmountTable &AmountController::get(int id) {
+    const AmountTable &AmountController::get(size_t id) {
         return model.fetchOne(id);
     }
 
@@ -15,11 +15,11 @@ namespace employ::custom::controller {
         return model.fetchAll();
     }
 
-    vector<int> AmountController::salary(const vector<int> &empIds) {
-        return model.fetchSalary(empIds);
+    vector<int> AmountController::salary(const vector <size_t> &empId) {
+        return model.fetchSalary(empId);
     }
 
-    int AmountController::insert(int empId, int amount) {
+    size_t AmountController::insert(size_t empId, int amount) {
         return model.insert(AmountTable{empId, amount});
     }
 }

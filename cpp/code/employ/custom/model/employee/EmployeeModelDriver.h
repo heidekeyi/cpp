@@ -2,8 +2,8 @@
 // Created by 12131 on 2021/9/2.
 //
 
-#ifndef CPP_EMPLOYEEMODELDRIVER_H
-#define CPP_EMPLOYEEMODELDRIVER_H
+#pragma once
+
 namespace employ::custom::model {
     class EmployeeModelDriver {
     public:
@@ -18,4 +18,4 @@ namespace employ::custom::model {
         EmployeeModelDriver &fetchFire();
     };
 }
-#endif //CPP_EMPLOYEEMODELDRIVER_H
+

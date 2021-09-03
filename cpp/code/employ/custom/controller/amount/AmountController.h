@@ -2,8 +2,7 @@
 // Created by 12131 on 2021/8/31.
 //
 
-#ifndef CPP_AMOUNTCONTROLLER_H
-#define CPP_AMOUNTCONTROLLER_H
+#pragma once
 
 #include "../../model/amount/AmountModel.h"
 #include "../../table/amount/AmountTable.h"
@@ -16,17 +15,16 @@ namespace employ::custom::controller {
 
     class AmountController {
     public:
-        const AmountTable &get(int id);
+        const AmountTable &get(size_t id);
 
         const vector<AmountTable> &get();
 
-        vector<int> salary(const vector<int> &empIds);
+        vector<int> salary(const vector<size_t> &vEmpId);
 
-        int insert(int empId, int amount);
+        size_t insert(size_t empId, int amount);
 
     private:
         AmountModel model{};
     };
 }
 
-#endif //CPP_AMOUNTCONTROLLER_H
