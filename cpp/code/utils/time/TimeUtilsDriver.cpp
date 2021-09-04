@@ -1,22 +1,21 @@
 //
 // Created by 12131 on 2021/9/1.
 //
-#include <iostream>
+
 #include "TimeUtilsDriver.h"
 #include "TimeUtils.h"
 
-
 namespace utils {
-    using std::cout, std::endl;
-
     TimeUtilsDriver &TimeUtilsDriver::datetime() {
-        cout << TimeUtils::datetime(0) << endl;
-        cout << TimeUtils::datetime() << endl;
+        displayUtils.out("TimeUtilsDriver::datetime").next()
+                .out(TimeUtils::datetime(1000)).next()
+                .out(TimeUtils::datetime()).next();
         return *this;
     }
 
     TimeUtilsDriver &TimeUtilsDriver::timestamp() {
-        cout << TimeUtils::timestamp() << endl;
+        displayUtils.out("TimeUtilsDriver::timestamp").next()
+        .out(TimeUtils::timestamp()).next();
         return *this;
     }
 }

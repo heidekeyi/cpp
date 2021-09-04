@@ -7,31 +7,33 @@
 
 #include "utils/display/DisplayUtilsDriver.h"
 #include "utils/time/TimeUtilsDriver.h"
-#include "utils/stream/StreamUtilsDriver.h"
-#include "employ/custom/table/base/BaseTableDriver.h"
-#include "employ/custom/table/amount/AmountTableDriver.h"
-#include "employ/custom/table/employee/EmployeeTableDriver.h"
-#include "employ/custom/model/amount/AmountModelDriver.h"
-#include "employ/custom/model/employee/EmployeeModelDriver.h"
-#include "employ/custom/controller/amount/AmountControllerDriver.h"
-#include "employ/custom/controller/employee/EmployeeControllerDriver.h"
-#include "employ/custom/menu/quit/QuitMenuDriver.h"
-#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
-#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
-#include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
-#include "employ/custom/menu/salary/promote/PromoteMenuDriver.h"
-#include "employ/custom/menu/salary/demote/DemoteMenuDriver.h"
-
-#include "employ/custom/app/AppCustom.h"
+//#include "utils/stream/StreamUtilsDriver.h"
+//#include "employ/custom/table/base/BaseTableDriver.h"
+//#include "employ/custom/table/amount/AmountTableDriver.h"
+//#include "employ/custom/table/employee/EmployeeTableDriver.h"
+//#include "employ/custom/model/amount/AmountModelDriver.h"
+//#include "employ/custom/model/employee/EmployeeModelDriver.h"
+//#include "employ/custom/controller/amount/AmountControllerDriver.h"
+//#include "employ/custom/controller/employee/EmployeeControllerDriver.h"
+//#include "employ/custom/menu/quit/QuitMenuDriver.h"
+//#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
+//#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
+//#include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
+//#include "employ/custom/menu/salary/impl/SalaryIMPLDriver.h"
+//#include "employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h"
+//#include "employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.h"
+//
+//#include "employ/custom/app/AppCustom.h"
 
 void driver() {
 
 //    utils::DisplayUtilsDriver{}
+//            .with()
 //            .left()
-//            .with();
-//    utils::TimeUtilsDriver{}
-//            .datetime()
-//            .timestamp();
+//            .right();
+    utils::TimeUtilsDriver{}
+            .datetime()
+            .timestamp();
 //    utils::StreamUtilsDriver{}
 //            .charValue()
 //            .clear()
@@ -85,12 +87,16 @@ void driver() {
 //    employ::custom::menu::DisplayHireEmployeeMenuDriver{}
 //            .display()
 //            .action();
-    employ::custom::menu::PromoteMenuDriver{}
-            .display()
-            .action();
-    employ::custom::menu::DemoteMenuDriver{}
-            .display()
-            .action();
+//    employ::custom::menu::SalaryIMPLDriver{}
+//            .display()
+//            .promote()
+//            .demote();
+//    employ::custom::menu::PromoteSalaryMenuDriver{}
+//            .display()
+//            .action();
+//    employ::custom::menu::DemoteSalaryMenuDriver{}
+//            .display()
+//            .action();
 
 //    employ::custom::AppCustom{}.start();
 }

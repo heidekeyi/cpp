@@ -5,14 +5,29 @@
 
 #pragma once
 
-#include <iomanip>
-
+#include <iostream>
+#include <string>
+#include <ctime>
 namespace utils {
+    using std::cout, std::endl, std::string, std::time_t;
+
     class DisplayUtils {
     public:
-        static auto width(int w) { return std::setw(w); };
+        DisplayUtils &width(size_t w);
 
-        static auto left() { return std::setiosflags(std::ios::left); };
+        DisplayUtils &left();
+
+        DisplayUtils &right();
+
+        DisplayUtils &next();
+
+        DisplayUtils &out(int val);
+
+        DisplayUtils &out(char ch);
+
+        DisplayUtils &out(const string &str);
+
+        DisplayUtils &out(time_t t);
     };
 }
 

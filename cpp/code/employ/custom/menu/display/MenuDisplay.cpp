@@ -4,37 +4,50 @@
 
 #include "MenuDisplay.h"
 #include <iostream>
-#include "../../../../utils/display/DisplayUtils.h"
 
 namespace employ::custom::menu {
     using std::cout, std::endl;
-    using utils::DisplayUtils;
 
     void MenuDisplay::employee(const vector<EmployeeTable> &vEmp, const vector<int> &vSalary) {
-        auto align = DisplayUtils::left();
-        auto wId = DisplayUtils::width(6);
-        auto wTime = DisplayUtils::width(21);
-        auto wEmpNo = DisplayUtils::width(8);
-        auto wName = DisplayUtils::width(8);
-        auto wSalary = DisplayUtils::width(8);
-        cout << align << wId << "id"
-             << align << wTime << "createTime"
-             << align << wEmpNo << "empNo"
-             << align << wName << "name"
-             << align << wSalary << "salary"
-             << align << wTime << "hireTime"
-             << align << wTime << "fireTime"
-             << endl;
-        for (int i = 0; i < vEmp.size(); ++i) {
+        const size_t w[]{
+                6, 21, 8, 8, 8,
+                21, 21
+        };
+        const char *n[]{
+                "id", "createTime", "empNo", "name", "salary",
+                "hireTime", "fireTime"
+        };
+        cout.setf(std::ios::left);
+        for (int i = 0; i < sizeof(n) / sizeof(*n); ++i) {
+            cout.width(w[i]);
+            cout << n[i];
+        }
+        cout << endl;
+        for (int i = 0, ix = 0; i < vEmp.size(); ++i, ix = 0) {
             auto &it = vEmp[i];
-            cout << align << wId << it.id()
-                 << align << wTime << it.createTime()
-                 << align << wEmpNo << it.empNo()
-                 << align << wName << it.name()
-                 << align << wSalary << vSalary[i]
-                 << align << wTime << it.hire()
-                 << align << wTime << it.fire()
-                 << endl;
+
+            cout.width(w[ix++]);
+            cout << it.id();
+
+            cout.width(w[ix++]);
+            cout << it.createTime();
+
+            cout.width(w[ix++]);
+            cout << it.empNo();
+
+            cout.width(w[ix++]);
+            cout << it.name();
+
+            cout.width(w[ix++]);
+            cout << vSalary[i];
+
+            cout.width(w[ix++]);
+            cout << it.hire();
+
+            cout.width(w[ix]);
+            cout << it.fire();
+
+            cout << endl;
         }
     }
 }

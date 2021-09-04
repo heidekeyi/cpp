@@ -5,12 +5,19 @@
 
 #pragma once
 
+#include "DisplayUtils.h"
+
 namespace utils {
     class DisplayUtilsDriver {
     public:
         DisplayUtilsDriver &with();
 
         DisplayUtilsDriver &left();
+
+        DisplayUtilsDriver &right();
+
+    private:
+        DisplayUtils displayUtils;
     };
 }
 

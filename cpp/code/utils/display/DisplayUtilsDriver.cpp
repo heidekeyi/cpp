@@ -3,23 +3,34 @@
 //
 
 #include "DisplayUtilsDriver.h"
-#include "DisplayUtils.h"
-#include <iostream>
 
 namespace utils {
-    using std::cout, std::endl;
-
     DisplayUtilsDriver &DisplayUtilsDriver::with() {
-        auto w = DisplayUtils::width(12);
-        cout << 1 << w << "hello" << endl;
+        cout << "DisplayUtilsDriver::with" << endl;
+        displayUtils.width(10).out(1)
+                .width(10).out('a')
+                .width(10).out("ab")
+                .next();
         return *this;
     }
 
     DisplayUtilsDriver &DisplayUtilsDriver::left() {
-        auto left = DisplayUtils::left();
-        cout << "a " << " b"
-             << left << DisplayUtils::width(12) << "hello"
-             << endl;
+        cout << "DisplayUtilsDriver::left" << endl;
+        displayUtils.left()
+                .width(10).out(1)
+                .width(10).out('a')
+                .width(10).out("ab")
+                .next();
+        return *this;
+    }
+
+    DisplayUtilsDriver &DisplayUtilsDriver::right() {
+        cout << "DisplayUtilsDriver::right" << endl;
+        displayUtils.left()
+                .out("left: ").width(10).out(1).out("a")
+                .right()
+                .out("----right").width(10).out('a').out(1)
+                .next();
         return *this;
     }
 }

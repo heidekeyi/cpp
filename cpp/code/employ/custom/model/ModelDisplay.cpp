@@ -3,24 +3,26 @@
 //
 
 #include "ModelDisplay.h"
-#include "../../../utils/display/DisplayUtils.h"
 #include <iostream>
 
 namespace employ::custom::model {
-    using utils::DisplayUtils;
     using std::cout, std::endl;
 
     void ModelDisplay::salary(const vector<size_t> &vEmpId, const vector<int> &vSalary) {
-        auto align = DisplayUtils::left();
-        auto wEmpId = DisplayUtils::width(6);
-        auto wAmount = DisplayUtils::width(8);
-        cout << wEmpId << align << "empId"
-             << wAmount << align << "salary"
-             << endl;
-        for (auto i = 0; i < vEmpId.size(); ++i) {
-            cout << wEmpId << align << vEmpId[i]
-                 << wAmount << align << vSalary[i]
-                 << endl;
+        const size_t w[]{6, 8};
+        const char *n[]{"empId", "salary"};
+        cout.setf(std::ios::left);
+        for (auto i = 0; i < sizeof(n) / sizeof(*n); ++i) {
+            cout.width(w[i]);
+            cout << n[i];
+        }
+        cout << endl;
+        for (auto i = 0, ix = 0; i < vEmpId.size(); ++i, ix = 0) {
+            cout.width(w[ix++]);
+            cout << vEmpId[i];
+            cout.width(w[ix]);
+            cout << vSalary[i];
+            cout << endl;
         }
     }
 }
