@@ -26,9 +26,13 @@ namespace utils {
 
         DisplayUtils &out(char ch);
 
+        DisplayUtils &out(bool status);
+
         DisplayUtils &out(size_t val);
 
         DisplayUtils &out(const string &str);
+
+        DisplayUtils &out(const char *str);
 
         DisplayUtils &out(time_t t);
     };

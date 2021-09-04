@@ -20,6 +20,9 @@ add_executable(cpp
         code/utils/stream/StreamUtilsDriver.cpp
         code/utils/stream/StreamUtilsDriver.h
 
+        #        code/employ/custom/app/AppCustom.cpp
+        #        code/employ/custom/app/AppCustom.h
+
 
         code/employ/custom/table/base/BaseTable.cpp
         code/employ/custom/table/base/BaseTable.h
@@ -52,18 +55,14 @@ add_executable(cpp
         code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
         code/employ/custom/controller/employee/EmployeeControllerDriver.h
 
-        #        code/employ/custom/app/AppCustom.cpp
-        #        code/employ/custom/app/AppCustom.h
-        #
-        #
         #        code/employ/custom/menu/display/MenuDisplay.cpp
         #        code/employ/custom/menu/display/MenuDisplay.h
-        #        code/employ/custom/menu/base/BaseMenu.h
-        #        code/employ/custom/menu/quit/QuitMenu.cpp
-        #        code/employ/custom/menu/quit/QuitMenu.h
-        #        code/employ/custom/menu/quit/QuitMenuDriver.cpp
-        #        code/employ/custom/menu/quit/QuitMenuDriver.h
-        #        code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.cpp
+        code/employ/custom/menu/base/BaseMenu.h
+        code/employ/custom/menu/quit/QuitMenu.cpp
+        code/employ/custom/menu/quit/QuitMenu.h
+        code/employ/custom/menu/quit/QuitMenuDriver.cpp
+        code/employ/custom/menu/quit/QuitMenuDriver.h
+        #                code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.cpp
         #        code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.h
         #        code/employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.cpp
         #        code/employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h

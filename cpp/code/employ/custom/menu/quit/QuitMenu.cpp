@@ -3,11 +3,8 @@
 //
 
 #include "QuitMenu.h"
-#include <iostream>
 
 namespace employ::custom::menu {
-    using std::cout, std::endl;
-
     void QuitMenu::action() {
         valQuitStatus = true;
     }

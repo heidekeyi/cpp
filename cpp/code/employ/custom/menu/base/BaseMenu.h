@@ -4,7 +4,12 @@
 
 #pragma once
 
+#include <iostream>
+#include <string>
+
 namespace employ::custom::menu {
+    using std::cout, std::endl, std::string;
+
     class BaseMenu {
     public:
         virtual void display() = 0;

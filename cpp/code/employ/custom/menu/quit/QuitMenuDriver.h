@@ -4,6 +4,9 @@
 
 #pragma once
 
+#include "../../../../utils/display/DisplayUtils.h"
+#include "QuitMenu.h"
+
 namespace employ::custom::menu {
     class QuitMenuDriver {
     public:
@@ -12,6 +15,10 @@ namespace employ::custom::menu {
         QuitMenuDriver &action();
 
         QuitMenuDriver &quitStatus();
+
+    private:
+        utils::DisplayUtils displayUtils;
+        QuitMenu quitMenu;
     };
 }
 

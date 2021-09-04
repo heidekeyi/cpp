@@ -3,27 +3,30 @@
 //
 
 #include "QuitMenuDriver.h"
-#include "QuitMenu.h"
-#include <iostream>
 
 namespace employ::custom::menu {
-    using std::cout, std::endl;
-
     QuitMenuDriver &QuitMenuDriver::quitStatus() {
-        cout << QuitMenu{}.quitStatus() << endl;
+        displayUtils
+                .out("QuitMenuDriver::quitStatus").next()
+                .out(quitMenu.quitStatus()).next();
         return *this;
     }
 
     QuitMenuDriver &QuitMenuDriver::action() {
-        QuitMenu obj{};
-        cout << "action before: " << obj.quitStatus() << endl;
-        obj.action();
-        cout << "action after: " << obj.quitStatus() << endl;
+        displayUtils
+                .out("QuitMenuDriver::action").next()
+                .out("action before: ").out(quitMenu.quitStatus())
+                .next();
+        quitMenu.action();
+        displayUtils
+                .out("action after: ").out(quitMenu.quitStatus())
+                .next();
         return *this;
     }
 
     QuitMenuDriver &QuitMenuDriver::display() {
-        QuitMenu{}.display();
+        displayUtils.out("QuitMenuDriver::display").next();
+        quitMenu.display();
         return *this;
     }
 }

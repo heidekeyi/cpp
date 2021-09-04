@@ -25,6 +25,7 @@ namespace utils {
         return *this;
     }
 
+
     DisplayUtils &DisplayUtils::out(int val) {
         cout << val;
         return *this;
@@ -47,6 +48,16 @@ namespace utils {
 
     DisplayUtils &DisplayUtils::out(size_t val) {
         cout << val;
+        return *this;
+    }
+
+    DisplayUtils &DisplayUtils::out(bool status) {
+        cout << (status ? "true" : "false");
+        return *this;
+    }
+
+    DisplayUtils &DisplayUtils::out(const char *str) {
+        cout << str;
         return *this;
     }
 }
