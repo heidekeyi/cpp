@@ -2,21 +2,20 @@
 // Created by 12131 on 2021/9/3.
 //
 
-#include "DisplayAllEmployeeMenuDriver.h"
-#include "../../../controller/amount/AmountController.h"
-
+#include "DisplayHireEmployeeMenuDriver.h"
+#include "../../../../controller/amount/AmountController.h"
 
 namespace employ::custom::menu {
     using namespace employ::custom::controller;
 
-    DisplayAllEmployeeMenuDriver &DisplayAllEmployeeMenuDriver::display() {
-        cout << "DisplayAllEmployeeMenuDriver::display" << endl;
-        displayAllEmployeeMenu.display();
+    DisplayHireEmployeeMenuDriver &DisplayHireEmployeeMenuDriver::display() {
+        cout << "DisplayHireEmployeeMenuDriver::display" << endl;
+        displayHireEmployeeMenu.display();
         return *this;
     }
 
-    DisplayAllEmployeeMenuDriver &DisplayAllEmployeeMenuDriver::action() {
-        cout << "DisplayAllEmployeeMenuDriver::action" << endl;
+    DisplayHireEmployeeMenuDriver &DisplayHireEmployeeMenuDriver::action() {
+        cout << "DisplayHireEmployeeMenuDriver::action" << endl;
         EmployeeController e;
         AmountController a;
         auto now = TimeUtils::datetime();
@@ -31,7 +30,7 @@ namespace employ::custom::menu {
         a.insert(2, -1500);
         a.insert(1, 3000);
         a.insert(3, 800);
-        displayAllEmployeeMenu.action();
+        displayHireEmployeeMenu.action();
         return *this;
     }
 }

@@ -104,9 +104,10 @@ void driverController() {
 #include "employ/custom/menu/quit/QuitMenuDriver.h"
 #include "employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.h"
 #include "employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h"
-#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
-#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
-#include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
+#include "employ/custom/menu/employee/display/all/DisplayAllEmployeeMenuDriver.h"
+#include "employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenuDriver.h"
+#include "employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenuDriver.h"
+#include "employ/custom/menu/employee/hire/HireEmployeeMenuDriver.h"
 
 void driverMenu() {
     using namespace employ::custom::menu;
@@ -120,13 +121,16 @@ void driverMenu() {
 //    PromoteSalaryMenuDriver{}
 //            .display()
 //            .action();
-//    employ::custom::menu::DisplayAllEmployeeMenuDriver{}
+//    DisplayAllEmployeeMenuDriver{}
 //            .display()
 //            .action();
-//    employ::custom::menu::DisplayFireEmployeeMenuDriver{}
+//    DisplayFireEmployeeMenuDriver{}
 //            .display()
 //            .action();
-//    employ::custom::menu::DisplayHireEmployeeMenuDriver{}
+//    DisplayHireEmployeeMenuDriver{}
+//            .display()
+//            .action();
+//    HireEmployeeMenuDriver{}
 //            .display()
 //            .action();
 }

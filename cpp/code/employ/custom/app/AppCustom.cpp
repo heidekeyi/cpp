@@ -3,11 +3,12 @@
 //
 
 #include "AppCustom.h"
-#include "../menu/display/all/DisplayAllEmployeeMenu.h"
-#include "../menu/display/fire/DisplayFireEmployeeMenu.h"
-#include "../menu/display/hire/DisplayHireEmployeeMenu.h"
+#include "../menu/employee/display/all/DisplayAllEmployeeMenu.h"
+#include "../menu/employee/display/fire/DisplayFireEmployeeMenu.h"
+#include "../menu/employee/display/hire/DisplayHireEmployeeMenu.h"
 #include "../menu/salary/promote/PromoteSalaryMenu.h"
 #include "../menu/salary/demote/DemoteSalaryMenu.h"
+#include "../menu/employee/hire/HireEmployeeMenu.h"
 
 namespace employ::custom {
     using namespace employ::custom::menu;
@@ -36,6 +37,7 @@ namespace employ::custom {
         vMenu.push_back(new DisplayFireEmployeeMenu);
         vMenu.push_back(new PromoteSalaryMenu);
         vMenu.push_back(new DemoteSalaryMenu);
+        vMenu.push_back(new HireEmployeeMenu);
         vMenu.push_back(quitMenu);
         return *this;
     }

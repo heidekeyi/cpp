@@ -61,20 +61,20 @@ add_executable(cpp
         code/employ/custom/menu/quit/QuitMenu.h
         code/employ/custom/menu/quit/QuitMenuDriver.cpp
         code/employ/custom/menu/quit/QuitMenuDriver.h
-        code/employ/custom/menu/display/base/DisplayBaseEmployeeMenu.cpp
-        code/employ/custom/menu/display/base/DisplayBaseEmployeeMenu.h
-        code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.cpp
-        code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.h
-        code/employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.cpp
-        code/employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h
-        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenu.cpp
-        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenu.h
-        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.cpp
-        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h
-        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenu.cpp
-        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenu.h
-        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.cpp
-        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h
+        code/employ/custom/menu/employee/display/base/DisplayBaseEmployeeMenu.cpp
+        code/employ/custom/menu/employee/display/base/DisplayBaseEmployeeMenu.h
+        code/employ/custom/menu/employee/display/all/DisplayAllEmployeeMenu.cpp
+        code/employ/custom/menu/employee/display/all/DisplayAllEmployeeMenu.h
+        code/employ/custom/menu/employee/display/all/DisplayAllEmployeeMenuDriver.cpp
+        code/employ/custom/menu/employee/display/all/DisplayAllEmployeeMenuDriver.h
+        code/employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenu.cpp
+        code/employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenu.h
+        code/employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenuDriver.cpp
+        code/employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenuDriver.h
+        code/employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenu.cpp
+        code/employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenu.h
+        code/employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenuDriver.cpp
+        code/employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenuDriver.h
 
         code/employ/custom/menu/salary/base/BaseSalaryMenu.cpp
         code/employ/custom/menu/salary/base/BaseSalaryMenu.h
@@ -85,4 +85,8 @@ add_executable(cpp
         code/employ/custom/menu/salary/promote/PromoteSalaryMenu.cpp
         code/employ/custom/menu/salary/promote/PromoteSalaryMenu.h
         code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.cpp
-        code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h)
+        code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h
+        code/employ/custom/menu/employee/hire/HireEmployeeMenu.cpp
+        code/employ/custom/menu/employee/hire/HireEmployeeMenu.h
+        code/employ/custom/menu/employee/hire/HireEmployeeMenuDriver.cpp
+        code/employ/custom/menu/employee/hire/HireEmployeeMenuDriver.h)
