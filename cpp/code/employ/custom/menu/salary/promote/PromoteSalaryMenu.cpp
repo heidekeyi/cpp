@@ -3,14 +3,13 @@
 //
 
 #include "PromoteSalaryMenu.h"
-#include "../impl/SalaryIMPL.h"
 
 namespace employ::custom::menu {
     void PromoteSalaryMenu::action() {
-        SalaryIMPL::promote();
+        promote();
     }
 
     void PromoteSalaryMenu::display() {
-        SalaryIMPL::display("promote salary");
+        cout << "promote salary" << endl;
     }
 }

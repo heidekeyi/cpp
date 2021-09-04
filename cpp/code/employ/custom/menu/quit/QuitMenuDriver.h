@@ -1,11 +1,12 @@
 //
-// Created by 12131 on 2021/9/2.
+// Created by 12131 on 2021/9/4.
 //
+
 
 #pragma once
 
-#include "../../../../utils/display/DisplayUtils.h"
 #include "QuitMenu.h"
+#include "../../../../utils/display/DisplayUtils.h"
 
 namespace employ::custom::menu {
     class QuitMenuDriver {
@@ -17,8 +18,8 @@ namespace employ::custom::menu {
         QuitMenuDriver &quitStatus();
 
     private:
-        utils::DisplayUtils displayUtils;
         QuitMenu quitMenu;
+        utils::DisplayUtils displayUtils;
     };
 }
 

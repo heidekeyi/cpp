@@ -3,14 +3,13 @@
 //
 
 #include "DemoteSalaryMenu.h"
-#include "../impl/SalaryIMPL.h"
 
 namespace employ::custom::menu {
     void DemoteSalaryMenu::action() {
-
+        demote();
     }
 
     void DemoteSalaryMenu::display() {
-        SalaryIMPL::display("demote salary");
+        cout << "demote salary" << endl;
     }
 }

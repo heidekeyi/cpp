@@ -3,16 +3,22 @@
 //
 
 #include "DemoteSalaryMenuDriver.h"
-#include "DemoteSalaryMenu.h"
+#include "../../../controller/amount/AmountControllerDriver.h"
 
 namespace employ::custom::menu {
+    using namespace employ::custom::controller;
 
     DemoteSalaryMenuDriver &DemoteSalaryMenuDriver::display() {
-        DemoteSalaryMenu{}.display();
+        cout << "DemoteSalaryMenuDriver::display" << endl;
+        demoteSalaryMenu.display();
         return *this;
     }
 
     DemoteSalaryMenuDriver &DemoteSalaryMenuDriver::action() {
+        cout << "DemoteSalaryMenuDriver::action" << endl;
+        demoteSalaryMenu.action();
+        AmountControllerDriver{}
+                .display(AmountController{}.get());
         return *this;
     }
 }

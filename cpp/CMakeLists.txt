@@ -76,18 +76,13 @@ add_executable(cpp
         code/employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.cpp
         code/employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h
 
-        #        code/employ/custom/menu/salary/promote/PromoteSalaryMenu.cpp
-        #        code/employ/custom/menu/salary/promote/PromoteSalaryMenu.h
-        #        code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.cpp
-        #        code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h
-        #        code/employ/custom/menu/salary/demote/DemoteSalaryMenu.cpp
-        #        code/employ/custom/menu/salary/demote/DemoteSalaryMenu.h
-        #        code/employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.cpp
-        #        code/employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.h
-        #        code/employ/custom/menu/salary/impl/SalaryIMPL.cpp
-        #        code/employ/custom/menu/salary/impl/SalaryIMPL.h
-        #        code/employ/custom/menu/salary/impl/SalaryIMPLDriver.cpp
-        #        code/employ/custom/menu/salary/impl/SalaryIMPLDriver.h
-
-
-        )
+        code/employ/custom/menu/salary/base/BaseSalaryMenu.cpp
+        code/employ/custom/menu/salary/base/BaseSalaryMenu.h
+        code/employ/custom/menu/salary/demote/DemoteSalaryMenu.cpp
+        code/employ/custom/menu/salary/demote/DemoteSalaryMenu.h
+        code/employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.cpp
+        code/employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.h
+        code/employ/custom/menu/salary/promote/PromoteSalaryMenu.cpp
+        code/employ/custom/menu/salary/promote/PromoteSalaryMenu.h
+        code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.cpp
+        code/employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h)

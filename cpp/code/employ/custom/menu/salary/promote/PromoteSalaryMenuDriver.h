@@ -5,12 +5,17 @@
 
 #pragma once
 
+#include "PromoteSalaryMenu.h"
+
 namespace employ::custom::menu {
     class PromoteSalaryMenuDriver {
     public:
         PromoteSalaryMenuDriver &display();
 
         PromoteSalaryMenuDriver &action();
+
+    private:
+        PromoteSalaryMenu promoteSalaryMenu;
     };
 }
 
