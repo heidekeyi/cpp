@@ -78,4 +78,14 @@ add_executable(cpp
         code/employ/custom/menu/display/fire/DisplayFireEmployeeMenu.h
         code/employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.cpp
         code/employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h
+        code/employ/custom/menu/salary/promote/PromoteMenu.cpp
+        code/employ/custom/menu/salary/promote/PromoteMenu.h
+        code/employ/custom/menu/salary/promote/PromoteMenuDriver.cpp
+        code/employ/custom/menu/salary/promote/PromoteMenuDriver.h
+        code/employ/custom/menu/salary/demote/DemoteMenu.cpp
+        code/employ/custom/menu/salary/demote/DemoteMenu.h
+        code/employ/custom/menu/salary/demote/DemoteMenuDriver.cpp
+        code/employ/custom/menu/salary/demote/DemoteMenuDriver.h
+        code/employ/custom/menu/salary/MenuSalary.cpp
+        code/employ/custom/menu/salary/MenuSalary.h
         )

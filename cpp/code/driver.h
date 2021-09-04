@@ -19,6 +19,8 @@
 #include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
 #include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
 #include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
+#include "employ/custom/menu/salary/promote/PromoteMenuDriver.h"
+#include "employ/custom/menu/salary/demote/DemoteMenuDriver.h"
 
 #include "employ/custom/app/AppCustom.h"
 
@@ -83,8 +85,14 @@ void driver() {
 //    employ::custom::menu::DisplayHireEmployeeMenuDriver{}
 //            .display()
 //            .action();
+    employ::custom::menu::PromoteMenuDriver{}
+            .display()
+            .action();
+    employ::custom::menu::DemoteMenuDriver{}
+            .display()
+            .action();
 
-    employ::custom::AppCustom{}.start();
+//    employ::custom::AppCustom{}.start();
 }
 
 
