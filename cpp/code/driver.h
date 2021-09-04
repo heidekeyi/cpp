@@ -5,12 +5,8 @@
 
 #pragma once
 
-#include "utils/display/DisplayUtilsDriver.h"
-#include "utils/time/TimeUtilsDriver.h"
-//#include "utils/stream/StreamUtilsDriver.h"
-//#include "employ/custom/table/base/BaseTableDriver.h"
-//#include "employ/custom/table/amount/AmountTableDriver.h"
-//#include "employ/custom/table/employee/EmployeeTableDriver.h"
+
+
 //#include "employ/custom/model/amount/AmountModelDriver.h"
 //#include "employ/custom/model/employee/EmployeeModelDriver.h"
 //#include "employ/custom/controller/amount/AmountControllerDriver.h"
@@ -25,33 +21,15 @@
 //
 //#include "employ/custom/app/AppCustom.h"
 
+void driverUtils();
+
+void driverTable();
+
 void driver() {
 
-//    utils::DisplayUtilsDriver{}
-//            .with()
-//            .left()
-//            .right();
-    utils::TimeUtilsDriver{}
-            .datetime()
-            .timestamp();
-//    utils::StreamUtilsDriver{}
-//            .charValue()
-//            .clear()
-//            .intValue()
-//            .lineValue();
-//    employ::custom::table::BaseTableDriver{}
-//            .id()
-//            .createTime();
-//    employ::custom::table::AmountTableDriver{}
-//            .empId()
-//            .amount()
-//            .clearCount();
-//    employ::custom::table::EmployeeTableDriver{}
-//            .empNo()
-//            .name()
-//            .hire()
-//            .fire()
-//            .clearCount();
+    driverUtils();
+    driverTable();
+
 //    employ::custom::model::AmountModelDriver{}
 //            .insert()
 //            .fetchOne()
@@ -101,4 +79,39 @@ void driver() {
 //    employ::custom::AppCustom{}.start();
 }
 
+#include "utils/display/DisplayUtilsDriver.h"
+#include "utils/time/TimeUtilsDriver.h"
+#include "utils/stream/StreamUtilsDriver.h"
 
+void driverUtils() {
+//    utils::DisplayUtilsDriver{}
+//            .with()
+//            .left()
+//            .right();
+//    utils::TimeUtilsDriver{}
+//            .datetime()
+//            .timestamp();
+//    utils::StreamUtilsDriver{}
+//            .charValue()
+//            .clear()
+//            .intValue()
+//            .lineValue();
+}
+
+#include "employ/custom/table/base/BaseTableDriver.h"
+#include "employ/custom/table/amount/AmountTableDriver.h"
+#include "employ/custom/table/employee/EmployeeTableDriver.h"
+
+void driverTable() {
+//    employ::custom::table::BaseTableDriver{}
+//            .id()
+//            .createTime();
+//    employ::custom::table::AmountTableDriver{}
+//            .empId()
+//            .amount();
+    employ::custom::table::EmployeeTableDriver{}
+            .empNo()
+            .name()
+            .hire()
+            .fire();
+}

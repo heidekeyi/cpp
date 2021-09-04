@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+
 namespace utils {
     using std::cout, std::endl, std::string, std::time_t;
 
@@ -24,6 +25,8 @@ namespace utils {
         DisplayUtils &out(int val);
 
         DisplayUtils &out(char ch);
+
+        DisplayUtils &out(size_t val);
 
         DisplayUtils &out(const string &str);
 

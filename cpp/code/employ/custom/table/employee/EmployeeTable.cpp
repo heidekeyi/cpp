@@ -9,10 +9,6 @@
 namespace employ::custom::table {
     size_t EmployeeTable::staticCount{1};
 
-    void EmployeeTable::clearCount() {
-        EmployeeTable::staticCount = 1;
-    }
-
     EmployeeTable::EmployeeTable(string empNo, string name,
                                  string hire, string fire) :
             BaseTable{EmployeeTable::staticCount},

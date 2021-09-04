@@ -4,7 +4,13 @@
 
 #pragma once
 
+#include <vector>
+#include "../../../../utils/display/DisplayUtils.h"
+#include "EmployeeTable.h"
+
 namespace employ::custom::table {
+    using std::vector;
+
     class EmployeeTableDriver {
     public:
         EmployeeTableDriver &empNo();
@@ -15,7 +21,12 @@ namespace employ::custom::table {
 
         EmployeeTableDriver &fire();
 
-        EmployeeTableDriver &clearCount();
+        void display(const EmployeeTable &obj);
+
+        void display(const vector<EmployeeTable> &vec);
+
+    private:
+        utils::DisplayUtils displayUtils;
     };
 }
 

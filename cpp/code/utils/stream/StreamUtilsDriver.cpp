@@ -4,46 +4,52 @@
 //
 
 #include "StreamUtilsDriver.h"
-#include <iostream>
 #include "StreamUtils.h"
 
 namespace utils {
-    using std::cout, std::endl;
-
     StreamUtilsDriver &StreamUtilsDriver::charValue() {
-        cout << "(ex: a b): ";
+        displayUtils
+                .out("StreamUtilsDriver::charValue").next()
+                .out("(ex: a b): ");
         char ch = StreamUtils::charValue();
-        cout << "first: " << ch << endl;
+        displayUtils.out("first: ").out(ch).next();
         ch = StreamUtils::charValue();
-        cout << "second: " << ch << endl;
+        displayUtils.out("second: ").out(ch).next();
         StreamUtils::clear();
         return *this;
     }
 
     StreamUtilsDriver &StreamUtilsDriver::intValue() {
-        cout << "(ex: 123 11): ";
-        cout << StreamUtils::intValue() << endl;
+        displayUtils
+                .out("StreamUtilsDriver::intValue").next()
+                .out("(ex: 123 11): ")
+                .out(StreamUtils::intValue())
+                .next();
         StreamUtils::clear();
         return *this;
     }
 
     StreamUtilsDriver &StreamUtilsDriver::lineValue() {
-        cout << "(ex: 123 ab c): ";
         char buffer[32];
-        cout << StreamUtils::lineValue(buffer, sizeof(buffer)) << endl;
+        displayUtils
+                .out("(ex: 123 ab c): ")
+                .out(StreamUtils::lineValue(buffer, sizeof(buffer)))
+                .next();
         return *this;
     }
 
     StreamUtilsDriver &StreamUtilsDriver::clear() {
-        cout << "(ex: ab): ";
+        displayUtils
+                .out("StreamUtilsDriver::clear").next()
+                .out("(ex: ab): ");
         char ch = StreamUtils::charValue();
-        cout << "first: " << ch << endl;
+        displayUtils.out("first: ").out(ch).next();
         StreamUtils::clear();
-        cout << "clear" << endl;
-        cout << "(ex: ab): ";
+        displayUtils.out("clear").next().out("(ex: ab): ");
         ch = StreamUtils::charValue();
-        cout << "first: " << ch << endl;
-        cout << "clear" << endl;
+        displayUtils.out("first: ")
+                .out(ch).next()
+                .out("clear").next();
         StreamUtils::clear();
         return *this;
     }

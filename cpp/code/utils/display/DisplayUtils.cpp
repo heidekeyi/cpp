@@ -44,4 +44,9 @@ namespace utils {
         cout << t;
         return *this;
     }
+
+    DisplayUtils &DisplayUtils::out(size_t val) {
+        cout << val;
+        return *this;
+    }
 }

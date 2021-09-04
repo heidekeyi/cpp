@@ -4,12 +4,25 @@
 
 #pragma once
 
+#include <vector>
+#include "../../../../utils/display/DisplayUtils.h"
+#include "BaseTable.h"
+
 namespace employ::custom::table {
+    using std::vector;
+
     class BaseTableDriver {
     public:
         BaseTableDriver &id();
 
         BaseTableDriver &createTime();
+
+        void display(const BaseTable &obj);
+
+        void display(const vector<BaseTable> &vec);
+
+    private:
+        utils::DisplayUtils displayUtils;
     };
 }
 

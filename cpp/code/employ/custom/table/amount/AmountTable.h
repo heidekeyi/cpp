@@ -10,8 +10,6 @@ namespace employ::custom::table {
     class AmountTable : public BaseTable {
     private:
         static size_t staticCount;
-    public:
-        static void clearCount();
 
     public:
         AmountTable(size_t empId, int amount);

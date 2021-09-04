@@ -7,10 +7,6 @@
 namespace employ::custom::table {
     size_t AmountTable::staticCount{1};
 
-    void AmountTable::clearCount() {
-        AmountTable::staticCount = 1;
-    }
-
     AmountTable::AmountTable(size_t empId, int amount)
             : BaseTable{AmountTable::staticCount},
               valEmpId{empId}, valAmount{amount} {

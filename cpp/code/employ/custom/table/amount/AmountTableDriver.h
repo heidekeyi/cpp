@@ -4,14 +4,25 @@
 
 #pragma once
 
+#include <vector>
+#include "../../../../utils/display/DisplayUtils.h"
+#include "AmountTable.h"
+
 namespace employ::custom::table {
+    using std::vector;
+
     class AmountTableDriver {
     public:
         AmountTableDriver &empId();
 
         AmountTableDriver &amount();
 
-        AmountTableDriver &clearCount();
+        void display(const AmountTable &obj);
+
+        void display(const vector<AmountTable> &vec);
+
+    private:
+        utils::DisplayUtils displayUtils;
     };
 }
 

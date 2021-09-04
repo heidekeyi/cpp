@@ -4,6 +4,9 @@
 
 
 #pragma once
+
+#include "../display/DisplayUtils.h"
+
 namespace utils {
     class StreamUtilsDriver {
     public:
@@ -14,6 +17,9 @@ namespace utils {
         StreamUtilsDriver &lineValue();
 
         StreamUtilsDriver &clear();
+
+    private:
+        DisplayUtils displayUtils;
     };
 }
 

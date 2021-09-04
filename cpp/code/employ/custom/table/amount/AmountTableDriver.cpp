@@ -3,37 +3,44 @@
 //
 
 #include "AmountTableDriver.h"
-#include "AmountTable.h"
-#include "../TableDisplay.h"
-#include <vector>
 
 namespace employ::custom::table {
-    using std::vector;
-
     AmountTableDriver &AmountTableDriver::empId() {
+        displayUtils.out("AmountTableDriver::empId").next();
         AmountTable obj{100, 1000};
-        TableDisplay::amount(obj);
+        display(obj);
         obj.empId(1);
-        TableDisplay::amount(obj);
+        display(obj);
         return *this;
     }
 
     AmountTableDriver &AmountTableDriver::amount() {
+        displayUtils.out("AmountTableDriver::amount").next();
         AmountTable obj{100, 1000};
-        TableDisplay::amount(obj);
+        display(obj);
         obj.amount(-1000);
-        TableDisplay::amount(obj);
+        display(obj);
         return *this;
     }
 
-    AmountTableDriver &AmountTableDriver::clearCount() {
-        vector<AmountTable> v{
-                AmountTable{100, 1000},
-                AmountTable{200, 2000}
-        };
-        TableDisplay::amount(v);
-        AmountTable::clearCount();
-        TableDisplay::amount(AmountTable{100, 200});
-        return *this;
+    void AmountTableDriver::display(const vector<AmountTable> &vec) {
+        displayUtils.right()
+                .width(8).out("id")
+                .width(21).out("createTime")
+                .width(8).out("empId")
+                .width(8).out("amount")
+                .next();
+        for (auto &it : vec) {
+            displayUtils.right()
+                    .width(8).out(it.id())
+                    .width(21).out(it.createTime())
+                    .width(8).out(it.empId())
+                    .width(8).out(it.amount())
+                    .next();
+        }
+    }
+
+    void AmountTableDriver::display(const AmountTable &obj) {
+        display(vector<AmountTable>{obj});
     }
 }

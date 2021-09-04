@@ -15,10 +15,6 @@ namespace employ::custom::table {
     private:
         static size_t staticCount;
     public:
-    public:
-        static void clearCount();
-
-    public:
         EmployeeTable(string empNo, string name,
                       string hire, string fire);
 
