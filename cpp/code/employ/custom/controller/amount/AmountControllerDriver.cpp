@@ -5,8 +5,8 @@
 #include "AmountControllerDriver.h"
 #include "AmountController.h"
 #include <iostream>
-#include "../../table/TableDisplay.h"
-#include "../../model/ModelDisplay.h"
+#include "../../model/zz/TableDisplay.h"
+#include "../../model/zz/ModelDisplay.h"
 
 namespace employ::custom::controller {
     using std::cout, std::endl, std::vector;

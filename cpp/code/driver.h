@@ -7,8 +7,7 @@
 
 
 
-//#include "employ/custom/model/amount/AmountModelDriver.h"
-//#include "employ/custom/model/employee/EmployeeModelDriver.h"
+
 //#include "employ/custom/controller/amount/AmountControllerDriver.h"
 //#include "employ/custom/controller/employee/EmployeeControllerDriver.h"
 //#include "employ/custom/menu/quit/QuitMenuDriver.h"
@@ -25,22 +24,14 @@ void driverUtils();
 
 void driverTable();
 
+void driverMode();
+
 void driver() {
 
     driverUtils();
     driverTable();
+    driverMode();
 
-//    employ::custom::model::AmountModelDriver{}
-//            .insert()
-//            .fetchOne()
-//            .fetchAll()
-//            .fetchSalary();
-//    employ::custom::model::EmployeeModelDriver{}
-//            .insert()
-//            .fetchOne()
-//            .fetchAll()
-//            .fetchHire()
-//            .fetchFire();
 //    employ::custom::controller::AmountControllerDriver{}
 //            .insert()
 //            .get()
@@ -109,9 +100,26 @@ void driverTable() {
 //    employ::custom::table::AmountTableDriver{}
 //            .empId()
 //            .amount();
-    employ::custom::table::EmployeeTableDriver{}
-            .empNo()
-            .name()
-            .hire()
-            .fire();
+//    employ::custom::table::EmployeeTableDriver{}
+//            .empNo()
+//            .name()
+//            .hire()
+//            .fire();
+}
+
+#include "employ/custom/model/amount/AmountModelDriver.h"
+#include "employ/custom/model/employee/EmployeeModelDriver.h"
+
+void driverMode() {
+//    employ::custom::model::AmountModelDriver{}
+//            .insert()
+//            .fetchOne()
+//            .fetchAll()
+//            .fetchSalary();
+    employ::custom::model::EmployeeModelDriver{}
+            .insert()
+            .fetchOne()
+            .fetchAll()
+            .fetchHire()
+            .fetchFire();
 }

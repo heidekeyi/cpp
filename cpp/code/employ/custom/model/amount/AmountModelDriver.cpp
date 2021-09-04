@@ -3,37 +3,31 @@
 //
 
 #include "AmountModelDriver.h"
-#include "../../table/amount/AmountTable.h"
-#include "AmountModel.h"
-#include <iostream>
-#include <vector>
-#include "../../table/TableDisplay.h"
-#include "../ModelDisplay.h"
 
 namespace employ::custom::model {
-    using namespace employ::custom::table;
-    using std::cout, std::endl, std::vector;
-
     AmountModelDriver &AmountModelDriver::fetchOne() {
-        AmountModel obj;
+        displayUtils.out("AmountModelDriver::fetchOne").next();
+        auto obj{amountModel};
         obj.insert(AmountTable{6, 6000});
         auto id = obj.insert(AmountTable{15, 5555});
         obj.insert(AmountTable{4, 4000});
-        TableDisplay::amount(obj.fetchOne(id));
+        display(obj.fetchOne(id));
         return *this;
     }
 
     AmountModelDriver &AmountModelDriver::fetchAll() {
-        AmountModel obj;
+        displayUtils.out("AmountModelDriver::fetchAll").next();
+        auto obj{amountModel};
         obj.insert(AmountTable{7, 7000});
         obj.insert(AmountTable{9, 9000});
         obj.insert(AmountTable{8, 8000});
-        TableDisplay::amount(obj.fetchAll());
+        display(obj.fetchAll());
         return *this;
     }
 
     AmountModelDriver &AmountModelDriver::fetchSalary() {
-        AmountModel obj;
+        displayUtils.out("AmountModelDriver::fetchSalary").next();
+        auto obj{amountModel};
         obj.insert(AmountTable{22, 1000});
         obj.insert(AmountTable{11, 1000});
         obj.insert(AmountTable{11, 600});
@@ -41,15 +35,39 @@ namespace employ::custom::model {
         obj.insert(AmountTable{33, 9000});
         obj.insert(AmountTable{11, 300});
         vector<size_t> v{11, 22, 33, 3, 9};
-        ModelDisplay::salary(v, obj.fetchSalary(v));
+        display(v, obj.fetchSalary(v));
         return *this;
     }
 
     AmountModelDriver &AmountModelDriver::insert() {
-        AmountModel obj;
-        cout << obj.insert(AmountTable{1, 1000}) << "\t"
-             << obj.insert(AmountTable{3, 3000}) << "\t"
-             << obj.insert(AmountTable{2, 2000}) << endl;
+        displayUtils.out("AmountModelDriver::insert").next();
+        auto obj{amountModel};
+        displayUtils
+                .out(obj.insert(AmountTable{2, 2000})).out("\t")
+                .out(obj.insert(AmountTable{3, 3000})).out("\t")
+                .out(obj.insert(AmountTable{1, 1000}))
+                .next();
         return *this;
+    }
+
+    void AmountModelDriver::display(const vector<AmountTable> &vec) {
+        amountTableDriver.display(vec);
+    }
+
+    void AmountModelDriver::display(const AmountTable &obj) {
+        amountTableDriver.display(obj);
+    }
+
+    void AmountModelDriver::display(const vector<size_t> &vEmpId, const vector<int> &vAmount) {
+        displayUtils.right()
+                .width(10).out("empId")
+                .width(10).out("amount")
+                .next();
+        for (int i = 0; i < vEmpId.size(); ++i) {
+            displayUtils.right()
+                    .width(10).out(vEmpId[i])
+                    .width(10).out(vAmount[i])
+                    .next();
+        }
     }
 }

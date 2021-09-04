@@ -6,8 +6,8 @@
 #include <iostream>
 #include "EmployeeController.h"
 #include "../amount/AmountController.h"
-#include "../../model/ModelDisplay.h"
-#include "../../table/TableDisplay.h"
+#include "../../model/zz/ModelDisplay.h"
+#include "../../model/zz/TableDisplay.h"
 
 namespace employ::custom::controller {
     using std::cout, std::endl;

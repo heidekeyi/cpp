@@ -10,6 +10,7 @@
 
 namespace employ::custom::table {
     using std::vector;
+    using namespace utils;
 
     class BaseTableDriver {
     public:
@@ -22,7 +23,7 @@ namespace employ::custom::table {
         void display(const vector<BaseTable> &vec);
 
     private:
-        utils::DisplayUtils displayUtils;
+        DisplayUtils displayUtils;
     };
 }
 
