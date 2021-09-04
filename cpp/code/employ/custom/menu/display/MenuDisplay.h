@@ -6,7 +6,7 @@
 #pragma once
 
 #include <vector>
-#include "../table/employee/EmployeeTable.h"
+#include "../../table/employee/EmployeeTable.h"
 
 namespace employ::custom::menu {
     using employ::custom::table::EmployeeTable;

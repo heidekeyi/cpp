@@ -16,9 +16,9 @@
 #include "employ/custom/controller/amount/AmountControllerDriver.h"
 #include "employ/custom/controller/employee/EmployeeControllerDriver.h"
 #include "employ/custom/menu/quit/QuitMenuDriver.h"
-#include "employ/custom/menu/all/AllMenuDriver.h"
-#include "employ/custom/menu/fire/FireMenuDriver.h"
-#include "employ/custom/menu/hire/HireMenuDriver.h"
+#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
+#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
+#include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
 
 #include "employ/custom/app/AppCustom.h"
 
@@ -74,13 +74,13 @@ void driver() {
 //            .display()
 //            .quitStatus()
 //            .action();
-//    employ::custom::menu::AllMenuDriver{}
+//    employ::custom::menu::DisplayAllEmployeeMenuDriver{}
 //            .display()
 //            .action();
-//    employ::custom::menu::FireMenuDriver{}
+//    employ::custom::menu::DisplayFireEmployeeMenuDriver{}
 //            .display()
 //            .action();
-//    employ::custom::menu::HireMenuDriver{}
+//    employ::custom::menu::DisplayHireEmployeeMenuDriver{}
 //            .display()
 //            .action();
 

@@ -5,9 +5,9 @@
 #include "AppCustom.h"
 #include <iostream>
 #include "../../../utils/stream/StreamUtils.h"
-#include "../menu/all/AllMenu.h"
-#include "../menu/fire/FireMenu.h"
-#include "../menu/hire/HireMenu.h"
+#include "../menu/display/all/DisplayAllEmployeeMenu.h"
+#include "../menu/display/fire/DisplayFireEmployeeMenu.h"
+#include "../menu/display/hire/DisplayHireEmployeeMenu.h"
 
 namespace employ::custom {
     using namespace employ::custom::menu;
@@ -36,9 +36,9 @@ namespace employ::custom {
     }
 
     AppCustom &AppCustom::initMenu() {
-        vMenu.push_back(new AllMenu);
-        vMenu.push_back(new HireMenu);
-        vMenu.push_back(new FireMenu);
+        vMenu.push_back(new DisplayAllEmployeeMenu);
+        vMenu.push_back(new DisplayHireEmployeeMenu);
+        vMenu.push_back(new DisplayFireEmployeeMenu);
         vMenu.push_back(quitMenu);
         return *this;
     }

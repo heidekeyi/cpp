@@ -50,7 +50,6 @@ namespace employ::custom::model {
         cout << obj.insert(AmountTable{1, 1000}) << "\t"
              << obj.insert(AmountTable{3, 3000}) << "\t"
              << obj.insert(AmountTable{2, 2000}) << endl;
-        TableDisplay::amount(obj.fetchAll());
         return *this;
     }
 }

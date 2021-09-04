@@ -2,21 +2,21 @@
 // Created by 12131 on 2021/9/3.
 //
 
-#include "FireMenuDriver.h"
-#include "FireMenu.h"
-#include "../../controller/amount/AmountController.h"
-#include "../../controller/employee/EmployeeController.h"
+#include "DisplayAllEmployeeMenuDriver.h"
+#include "DisplayAllEmployeeMenu.h"
+#include "../../../controller/amount/AmountController.h"
+#include "../../../controller/employee/EmployeeController.h"
 
 namespace employ::custom::menu {
     using namespace employ::custom::controller;
     using utils::TimeUtils;
 
-    FireMenuDriver &FireMenuDriver::display() {
-        FireMenu{}.display();
+    DisplayAllEmployeeMenuDriver &DisplayAllEmployeeMenuDriver::display() {
+        DisplayAllEmployeeMenu{}.display();
         return *this;
     }
 
-    FireMenuDriver &FireMenuDriver::action() {
+    DisplayAllEmployeeMenuDriver &DisplayAllEmployeeMenuDriver::action() {
         EmployeeController e;
         AmountController a;
         auto now = TimeUtils::datetime();
@@ -31,7 +31,7 @@ namespace employ::custom::menu {
         a.insert(2, -1500);
         a.insert(1, 3000);
         a.insert(3, 800);
-        FireMenu{}.action();
+        DisplayAllEmployeeMenu{}.action();
         return *this;
     }
 }

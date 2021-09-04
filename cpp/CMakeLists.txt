@@ -59,23 +59,23 @@ add_executable(cpp
         code/employ/custom/app/AppCustom.h
 
 
-        code/employ/custom/menu/MenuDisplay.cpp
-        code/employ/custom/menu/MenuDisplay.h
+        code/employ/custom/menu/display/MenuDisplay.cpp
+        code/employ/custom/menu/display/MenuDisplay.h
         code/employ/custom/menu/base/BaseMenu.h
         code/employ/custom/menu/quit/QuitMenu.cpp
         code/employ/custom/menu/quit/QuitMenu.h
         code/employ/custom/menu/quit/QuitMenuDriver.cpp
         code/employ/custom/menu/quit/QuitMenuDriver.h
-        code/employ/custom/menu/all/AllMenu.cpp
-        code/employ/custom/menu/all/AllMenu.h
-        code/employ/custom/menu/all/AllMenuDriver.cpp
-        code/employ/custom/menu/all/AllMenuDriver.h
-        code/employ/custom/menu/hire/HireMenu.cpp
-        code/employ/custom/menu/hire/HireMenu.h
-        code/employ/custom/menu/hire/HireMenuDriver.cpp
-        code/employ/custom/menu/hire/HireMenuDriver.h
-        code/employ/custom/menu/fire/FireMenu.cpp
-        code/employ/custom/menu/fire/FireMenu.h
-        code/employ/custom/menu/fire/FireMenuDriver.cpp
-        code/employ/custom/menu/fire/FireMenuDriver.h
+        code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.cpp
+        code/employ/custom/menu/display/all/DisplayAllEmployeeMenu.h
+        code/employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.cpp
+        code/employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h
+        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenu.cpp
+        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenu.h
+        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.cpp
+        code/employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h
+        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenu.cpp
+        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenu.h
+        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.cpp
+        code/employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h
         )

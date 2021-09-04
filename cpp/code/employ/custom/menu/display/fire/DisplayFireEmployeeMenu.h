@@ -5,10 +5,10 @@
 
 #pragma once
 
-#include "../base/BaseMenu.h"
+#include "../../base/BaseMenu.h"
 
 namespace employ::custom::menu{
-    class FireMenu : public BaseMenu {
+    class DisplayFireEmployeeMenu : public BaseMenu {
     public:
         void display() override;
 
