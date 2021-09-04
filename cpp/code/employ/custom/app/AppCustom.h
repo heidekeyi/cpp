@@ -13,16 +13,14 @@ namespace employ::custom {
 
     class AppCustom {
     public:
-        ~AppCustom() {
-            for (auto it : vMenu) {
-                delete it;
-            }
-        }
+        ~AppCustom();
 
         void start();
 
     private:
         AppCustom &initMenu();
+
+        void display();
 
     private:
         vector<BaseMenu *> vMenu;

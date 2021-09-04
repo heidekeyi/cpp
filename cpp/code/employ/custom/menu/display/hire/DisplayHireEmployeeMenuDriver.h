@@ -5,12 +5,17 @@
 
 #pragma once
 
-namespace employ::custom::menu{
+#include "DisplayHireEmployeeMenu.h"
+
+namespace employ::custom::menu {
     class DisplayHireEmployeeMenuDriver {
     public:
         DisplayHireEmployeeMenuDriver &display();
 
         DisplayHireEmployeeMenuDriver &action();
+
+    private:
+        DisplayHireEmployeeMenu displayHireEmployeeMenu;
     };
 }
 

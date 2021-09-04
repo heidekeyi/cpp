@@ -3,20 +3,19 @@
 //
 
 #include "DisplayFireEmployeeMenuDriver.h"
-#include "DisplayFireEmployeeMenu.h"
 #include "../../../controller/amount/AmountController.h"
-#include "../../../controller/employee/EmployeeController.h"
 
 namespace employ::custom::menu {
     using namespace employ::custom::controller;
-    using utils::TimeUtils;
 
     DisplayFireEmployeeMenuDriver &DisplayFireEmployeeMenuDriver::display() {
-        DisplayFireEmployeeMenu{}.display();
+        cout << "DisplayFireEmployeeMenuDriver::display" << endl;
+        displayFireEmployeeMenu.display();
         return *this;
     }
 
     DisplayFireEmployeeMenuDriver &DisplayFireEmployeeMenuDriver::action() {
+        cout << "DisplayFireEmployeeMenuDriver::action" << endl;
         EmployeeController e;
         AmountController a;
         auto now = TimeUtils::datetime();
@@ -31,7 +30,7 @@ namespace employ::custom::menu {
         a.insert(2, -1500);
         a.insert(1, 3000);
         a.insert(3, 800);
-        DisplayFireEmployeeMenu{}.action();
+        displayFireEmployeeMenu.action();
         return *this;
     }
 }

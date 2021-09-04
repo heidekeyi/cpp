@@ -5,7 +5,7 @@
 
 #pragma once
 
-//#include "employ/custom/app/AppCustom.h"
+#include "employ/custom/app/AppCustom.h"
 
 void driverUtils();
 
@@ -23,8 +23,7 @@ void driver() {
     driverMode();
     driverController();
     driverMenu();
-
-//    employ::custom::AppCustom{}.start();
+    employ::custom::AppCustom{}.start();
 }
 
 #include "utils/display/DisplayUtilsDriver.h"
@@ -105,18 +104,19 @@ void driverController() {
 
 #include "employ/custom/menu/quit/QuitMenuDriver.h"
 
-//#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
-//#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
-//#include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
+#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
+#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
+#include "employ/custom/menu/display/hire/DisplayHireEmployeeMenuDriver.h"
+
 //#include "employ/custom/menu/salary/impl/SalaryIMPLDriver.h"
 //#include "employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h"
 //#include "employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.h"
 void driverMenu() {
     using namespace employ::custom::menu;
-    QuitMenuDriver{}
-            .display()
-            .quitStatus()
-            .action();
+//    QuitMenuDriver{}
+//            .display()
+//            .quitStatus()
+//            .action();
 //    employ::custom::menu::DisplayAllEmployeeMenuDriver{}
 //            .display()
 //            .action();
