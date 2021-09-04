@@ -4,12 +4,6 @@
 
 
 #pragma once
-
-
-
-
-//#include "employ/custom/controller/amount/AmountControllerDriver.h"
-//#include "employ/custom/controller/employee/EmployeeControllerDriver.h"
 //#include "employ/custom/menu/quit/QuitMenuDriver.h"
 //#include "employ/custom/menu/display/all/DisplayAllEmployeeMenuDriver.h"
 //#include "employ/custom/menu/display/fire/DisplayFireEmployeeMenuDriver.h"
@@ -26,23 +20,14 @@ void driverTable();
 
 void driverMode();
 
-void driver() {
+void driverController();
 
+void driver() {
     driverUtils();
     driverTable();
     driverMode();
+    driverController();
 
-//    employ::custom::controller::AmountControllerDriver{}
-//            .insert()
-//            .get()
-//            .salary();
-//    employ::custom::controller::EmployeeControllerDriver{}
-//            .insert()
-//            .get()
-//            .salary()
-//            .all()
-//            .hire()
-//            .fire();
 //    employ::custom::menu::QuitMenuDriver{}
 //            .display()
 //            .quitStatus()
@@ -116,10 +101,28 @@ void driverMode() {
 //            .fetchOne()
 //            .fetchAll()
 //            .fetchSalary();
-    employ::custom::model::EmployeeModelDriver{}
+//    employ::custom::model::EmployeeModelDriver{}
+//            .insert()
+//            .fetchOne()
+//            .fetchAll()
+//            .fetchHire()
+//            .fetchFire();
+}
+
+#include "employ/custom/controller/amount/AmountControllerDriver.h"
+#include "employ/custom/controller/employee/EmployeeControllerDriver.h"
+
+void driverController() {
+    using namespace employ::custom::controller;
+//    employ::custom::controller::AmountControllerDriver{}
+//            .insert()
+//            .get()
+//            .salary();
+    employ::custom::controller::EmployeeControllerDriver{}
             .insert()
-            .fetchOne()
-            .fetchAll()
-            .fetchHire()
-            .fetchFire();
+            .get()
+            .salary()
+            .all()
+            .hire()
+            .fire();
 }

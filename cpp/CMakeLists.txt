@@ -43,15 +43,15 @@ add_executable(cpp
         code/employ/custom/model/employee/EmployeeModelDriver.cpp
         code/employ/custom/model/employee/EmployeeModelDriver.h
 
-        #        code/employ/custom/controller/amount/AmountController.cpp
-        #        code/employ/custom/controller/amount/AmountController.h
-        #        code/employ/custom/controller/amount/AmountControllerDriver.cpp
-        #        code/employ/custom/controller/amount/AmountControllerDriver.h
-        #        code/employ/custom/controller/employee/EmployeeController.cpp
-        #        code/employ/custom/controller/employee/EmployeeController.h
-        #        code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
-        #        code/employ/custom/controller/employee/EmployeeControllerDriver.h
-        #
+        code/employ/custom/controller/amount/AmountController.cpp
+        code/employ/custom/controller/amount/AmountController.h
+        code/employ/custom/controller/amount/AmountControllerDriver.cpp
+        code/employ/custom/controller/amount/AmountControllerDriver.h
+        code/employ/custom/controller/employee/EmployeeController.cpp
+        code/employ/custom/controller/employee/EmployeeController.h
+        code/employ/custom/controller/employee/EmployeeControllerDriver.cpp
+        code/employ/custom/controller/employee/EmployeeControllerDriver.h
+
         #        code/employ/custom/app/AppCustom.cpp
         #        code/employ/custom/app/AppCustom.h
         #

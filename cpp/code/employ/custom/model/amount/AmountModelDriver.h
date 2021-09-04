@@ -24,7 +24,7 @@ namespace employ::custom::model {
 
         void display(const vector<AmountTable> &vec);
 
-        void display(const vector<size_t> &vEmpId, const vector<int> &vAmount);
+        void display(const vector<size_t> &vEmpId, const vector<int> &vSalary);
 
     private:
         AmountTableDriver amountTableDriver;

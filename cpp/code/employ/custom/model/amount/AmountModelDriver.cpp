@@ -58,7 +58,7 @@ namespace employ::custom::model {
         amountTableDriver.display(obj);
     }
 
-    void AmountModelDriver::display(const vector<size_t> &vEmpId, const vector<int> &vAmount) {
+    void AmountModelDriver::display(const vector<size_t> &vEmpId, const vector<int> &vSalary) {
         displayUtils.right()
                 .width(10).out("empId")
                 .width(10).out("amount")
@@ -66,7 +66,7 @@ namespace employ::custom::model {
         for (int i = 0; i < vEmpId.size(); ++i) {
             displayUtils.right()
                     .width(10).out(vEmpId[i])
-                    .width(10).out(vAmount[i])
+                    .width(10).out(vSalary[i])
                     .next();
         }
     }

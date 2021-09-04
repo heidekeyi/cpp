@@ -3,43 +3,50 @@
 //
 
 #include "AmountControllerDriver.h"
-#include "AmountController.h"
-#include <iostream>
-#include "../../model/zz/TableDisplay.h"
-#include "../../model/zz/ModelDisplay.h"
 
 namespace employ::custom::controller {
-    using std::cout, std::endl, std::vector;
-    using namespace employ::custom::table;
-    using namespace employ::custom::model;
-
     AmountControllerDriver &AmountControllerDriver::get() {
-        AmountController obj;
+        displayUtils.out("AmountControllerDriver::get").next();
+        auto obj{amountController};
         obj.insert(2, 500);
         auto id = obj.insert(10, 10000);
         obj.insert(1, 1000);
-        TableDisplay::amount(obj.get(id));
-        TableDisplay::amount(obj.get());
+        display(obj.get(id));
+        display(obj.get());
         return *this;
     }
 
     AmountControllerDriver &AmountControllerDriver::salary() {
-        AmountController obj;
+        displayUtils.out("AmountControllerDriver::salary").next();
+        auto obj{amountController};
         obj.insert(2, 500);
         obj.insert(10, 1000);
         obj.insert(3, 1000);
         vector<size_t> v{1, 2, 10};
-        ModelDisplay::salary(v, obj.salary(v));
+        display(v, obj.salary(v));
         return *this;
     }
 
     AmountControllerDriver &AmountControllerDriver::insert() {
-        AmountController obj;
-        cout << obj.insert(3, 500) << "\t"
-             << obj.insert(2, 2000) << "\t"
-             << obj.insert(1, 1000) << "\t"
-             << endl;
-        TableDisplay::amount(AmountModel{}.fetchAll());
+        displayUtils.out("AmountControllerDriver::insert").next();
+        auto obj{amountController};
+        displayUtils
+                .out(obj.insert(3, 500)).out("\t")
+                .out(obj.insert(3, 500)).out("\t")
+                .out(obj.insert(3, 500)).out("\t")
+                .next();
         return *this;
+    }
+
+    void AmountControllerDriver::display(const vector<AmountTable> &vec) {
+        amountModelDriver.display(vec);
+    }
+
+    void AmountControllerDriver::display(const AmountTable &obj) {
+        amountModelDriver.display(obj);
+    }
+
+    void AmountControllerDriver::display(const vector<size_t> &vEmpId, const vector<int> &vSalary) {
+        amountModelDriver.display(vEmpId, vSalary);
     }
 }

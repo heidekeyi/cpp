@@ -5,7 +5,6 @@
 #include "EmployeeController.h"
 #include "../amount/AmountController.h"
 
-
 namespace employ::custom::controller {
     vector<int> EmployeeController::salary(const vector<EmployeeTable> &employee) {
         vector<size_t> v;

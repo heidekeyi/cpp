@@ -4,6 +4,10 @@
 
 #pragma once
 
+#include "EmployeeController.h"
+#include "../../model/employee/EmployeeModelDriver.h"
+#include "../amount/AmountControllerDriver.h"
+
 namespace employ::custom::controller {
     class EmployeeControllerDriver {
     public:
@@ -18,6 +22,17 @@ namespace employ::custom::controller {
         EmployeeControllerDriver &hire();
 
         EmployeeControllerDriver &fire();
+
+        void display(const EmployeeTable &obj);
+
+        void display(const vector<EmployeeTable> &vec);
+
+    private:
+        DisplayUtils displayUtils;
+        EmployeeController employeeController;
+        EmployeeModelDriver employeeModelDriver;
+        AmountControllerDriver amountControllerDriver;
+        AmountController amountController;
     };
 }
 
