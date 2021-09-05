@@ -56,6 +56,20 @@ namespace employ::custom::model {
         return *this;
     }
 
+    EmployeeModelDriver &EmployeeModelDriver::update() {
+        displayUtils.out("EmployeeModelDriver::update").next();
+        auto obj{employeeModel};
+        auto tmp{EmployeeTable{"10098", "tim", "2002", ""}};
+        obj.insert(tmp);
+        tmp.name("alex");
+        tmp.empNo("100000");
+        tmp.fire("2022");
+        display(obj.fetchOne(tmp.id()));
+        obj.update(tmp);
+        display(obj.fetchOne(tmp.id()));
+        return *this;
+    }
+
     void EmployeeModelDriver::display(const vector<EmployeeTable> &vec) {
         employeeTableDriver.display(vec);
     }

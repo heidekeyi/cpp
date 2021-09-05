@@ -55,4 +55,13 @@ namespace employ::custom::table {
         return *this;
     }
 
+    EmployeeTable &EmployeeTable::operator=(const EmployeeTable &obj) {
+        if (this != &obj) {
+            empNo(obj.empNo());
+            name(obj.name());
+            hire(obj.hire());
+            fire(obj.fire());
+        }
+        return *this;
+    }
 }

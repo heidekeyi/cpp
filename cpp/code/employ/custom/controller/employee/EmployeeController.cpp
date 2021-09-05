@@ -35,4 +35,8 @@ namespace employ::custom::controller {
     vector<EmployeeTable> EmployeeController::fire() const {
         return model.fetchFire();
     }
+
+    void EmployeeController::update(const EmployeeTable &obj) {
+        model.update(obj);
+    }
 }

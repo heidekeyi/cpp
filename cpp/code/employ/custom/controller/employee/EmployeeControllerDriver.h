@@ -23,6 +23,8 @@ namespace employ::custom::controller {
 
         EmployeeControllerDriver &fire();
 
+        EmployeeControllerDriver &update();
+
         void display(const EmployeeTable &obj);
 
         void display(const vector<EmployeeTable> &vec);

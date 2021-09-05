@@ -17,6 +17,7 @@ namespace employ::custom::controller {
     class EmployeeController {
     public:
         static vector<int> salary(const vector<EmployeeTable> &employee);
+
     public:
         [[nodiscard]] EmployeeTable get(size_t id) const;
 
@@ -28,6 +29,8 @@ namespace employ::custom::controller {
 
         size_t insert(const string &empNo, const string &name,
                       const string &hire, const string &fire);
+
+        void update(const EmployeeTable &obj);
 
     private:
         EmployeeModel model{};

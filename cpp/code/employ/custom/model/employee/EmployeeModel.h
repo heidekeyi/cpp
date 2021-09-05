@@ -25,6 +25,8 @@ namespace employ::custom::model {
 
         size_t insert(const EmployeeTable &obj);
 
+        void update(const EmployeeTable &obj);
+
     private:
         vector<EmployeeTable> &db{EmployeeModel::valDataBase};
     };

@@ -23,7 +23,7 @@ void driver() {
     driverMode();
     driverController();
     driverMenu();
-    employ::custom::AppCustom{}.start();
+//    employ::custom::AppCustom{}.start();
 }
 
 #include "utils/display/DisplayUtilsDriver.h"
@@ -80,7 +80,8 @@ void driverMode() {
 //            .fetchOne()
 //            .fetchAll()
 //            .fetchHire()
-//            .fetchFire();
+//            .fetchFire()
+//            .update();
 }
 
 #include "employ/custom/controller/amount/AmountControllerDriver.h"
@@ -98,7 +99,8 @@ void driverController() {
 //            .salary()
 //            .all()
 //            .hire()
-//            .fire();
+//            .fire()
+//            .update();
 }
 
 #include "employ/custom/menu/quit/QuitMenuDriver.h"

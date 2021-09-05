@@ -44,4 +44,15 @@ namespace employ::custom::model {
         }
         throw "employeeUI of relate id is not exist";
     }
+
+    void EmployeeModel::update(const EmployeeTable &obj) {
+        for (int i = 0; i < db.size(); ++i) {
+            auto it{db[i]};
+            if (it.id() == obj.id()) {
+                db[i] = obj;
+                return;
+            }
+        }
+        throw "data of employee is not exist";
+    }
 }

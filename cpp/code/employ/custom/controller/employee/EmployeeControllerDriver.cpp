@@ -75,6 +75,21 @@ namespace employ::custom::controller {
         return *this;
     }
 
+    EmployeeControllerDriver &EmployeeControllerDriver::update() {
+        displayUtils.out("EmployeeControllerDriver::update").next();
+        auto &obj{employeeController};
+        auto id{obj.insert("n22", "name12", "bbb", "ccc")};
+        auto tmp{obj.get(id)};
+        tmp.empNo("no");
+        tmp.hire("2020-1-1");
+        obj.update(tmp);
+        tmp.empNo("zz");
+        tmp.fire("");
+        display(obj.get(id));
+        display(tmp);
+        return *this;
+    }
+
     void EmployeeControllerDriver::display(const EmployeeTable &obj) {
         employeeModelDriver.display(obj);
     }

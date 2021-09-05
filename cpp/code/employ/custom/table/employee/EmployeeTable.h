@@ -18,6 +18,8 @@ namespace employ::custom::table {
         EmployeeTable(string empNo, string name,
                       string hire, string fire);
 
+        EmployeeTable &operator=(const EmployeeTable &obj);
+
         [[nodiscard]] string empNo() const;
 
         EmployeeTable &empNo(const string &empNo);

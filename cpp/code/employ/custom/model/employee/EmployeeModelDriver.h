@@ -22,6 +22,8 @@ namespace employ::custom::model {
 
         EmployeeModelDriver &fetchFire();
 
+        EmployeeModelDriver &update();
+
         void display(const EmployeeTable &obj);
 
         void display(const vector<EmployeeTable> &vec);
