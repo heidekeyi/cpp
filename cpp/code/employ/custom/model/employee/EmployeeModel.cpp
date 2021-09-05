@@ -46,10 +46,12 @@ namespace employ::custom::model {
     }
 
     void EmployeeModel::update(const EmployeeTable &obj) {
-        for (int i = 0; i < db.size(); ++i) {
-            auto it{db[i]};
+        for (auto it : db) {
             if (it.id() == obj.id()) {
-                db[i] = obj;
+                it.empNo(obj.empNo());
+                it.name(obj.name());
+                it.hire(obj.hire());
+                it.fire(obj.fire());
                 return;
             }
         }
