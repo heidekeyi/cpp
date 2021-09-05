@@ -3,13 +3,13 @@
 //
 
 #include "AppCustom.h"
-#include "../menu/all/AllMenu.h"
-#include "../menu/fired/FiredMenu.h"
-#include "../menu/hiring/HiringMenu.h"
-#include "../menu/promote/PromoteMenu.h"
-#include "../menu/demote/DemoteMenu.h"
-#include "../menu/hire/HireMenu.h"
-#include "../menu/fire/FireMenu.h"
+#include "../../custom/menu/all/AllMenu.h"
+#include "../../custom/menu/fired/FiredMenu.h"
+#include "../../custom/menu/hiring/HiringMenu.h"
+#include "../../custom/menu/promote/PromoteMenu.h"
+#include "../../custom/menu/demote/DemoteMenu.h"
+#include "../../custom/menu/hire/HireMenu.h"
+#include "../../custom/menu/fire/FireMenu.h"
 
 namespace employ::custom {
     using namespace employ::custom::menu;

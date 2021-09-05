@@ -5,7 +5,7 @@
 #pragma once
 
 #include <vector>
-#include "../../../utils/display/DisplayUtils.h"
+#include "../../../../utils/display/DisplayUtils.h"
 #include "AmountTable.h"
 
 namespace employ::custom::table {

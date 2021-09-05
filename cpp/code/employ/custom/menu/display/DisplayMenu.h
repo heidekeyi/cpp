@@ -8,7 +8,7 @@
 #include <vector>
 #include "../base/BaseMenu.h"
 #include "../../table/employee/EmployeeTable.h"
-#include "../../../utils/display/DisplayUtils.h"
+#include "../../../../utils/display/DisplayUtils.h"
 #include "../../controller/employee/EmployeeController.h"
 
 namespace employ::custom::menu {
