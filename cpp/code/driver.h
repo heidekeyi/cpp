@@ -104,8 +104,8 @@ void driverController() {
 }
 
 #include "employ/custom/menu/quit/QuitMenuDriver.h"
-#include "employ/custom/menu/salary/demote/DemoteSalaryMenuDriver.h"
-#include "employ/custom/menu/salary/promote/PromoteSalaryMenuDriver.h"
+#include "employ/custom/menu/employee/salary/demote/DemoteSalaryMenuDriver.h"
+#include "employ/custom/menu/employee/salary/promote/PromoteSalaryMenuDriver.h"
 #include "employ/custom/menu/employee/display/all/DisplayAllEmployeeMenuDriver.h"
 #include "employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenuDriver.h"
 #include "employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenuDriver.h"

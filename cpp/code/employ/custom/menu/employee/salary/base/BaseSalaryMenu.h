@@ -5,8 +5,7 @@
 
 #pragma once
 
-#include "../../base/BaseMenu.h"
-
+#include "../../../base/BaseMenu.h"
 namespace employ::custom::menu {
     class BaseSalaryMenu : public BaseMenu {
     public:
@@ -21,7 +20,6 @@ namespace employ::custom::menu {
 
     private:
         static size_t insert(int factor);
-        static void show();
     };
 }
 

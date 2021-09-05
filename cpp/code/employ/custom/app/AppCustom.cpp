@@ -6,8 +6,8 @@
 #include "../menu/employee/display/all/DisplayAllEmployeeMenu.h"
 #include "../menu/employee/display/fire/DisplayFireEmployeeMenu.h"
 #include "../menu/employee/display/hire/DisplayHireEmployeeMenu.h"
-#include "../menu/salary/promote/PromoteSalaryMenu.h"
-#include "../menu/salary/demote/DemoteSalaryMenu.h"
+#include "../menu/employee/salary/promote/PromoteSalaryMenu.h"
+#include "../menu/employee/salary/demote/DemoteSalaryMenu.h"
 #include "../menu/employee/hire/HireEmployeeMenu.h"
 #include "../menu/employee/fire/FireEmployeeMenu.h"
 
