@@ -7,11 +7,19 @@
 
 #include "../../../base/BaseMenu.h"
 #include "../../../../controller/employee/EmployeeController.h"
+#include "../../display/hire/DisplayHireEmployeeMenu.h"
 
 namespace employ::custom::menu {
     using namespace employ::custom::controller;
 
     class UpdateBaseEmployeeMenu : public BaseMenu {
+    protected:
+        static size_t id();
+
+        static int value();
+
+        static string word();
+
     public:
         void display() override = 0;
 
@@ -26,11 +34,17 @@ namespace employ::custom::menu {
 
         void name(const EmployeeTable &obj);
 
+    protected:
+        void displayEmployee();
+
+        EmployeeTable employee(size_t id);
+
     private:
         void update(const EmployeeTable &obj);
 
     private:
         EmployeeController employeeController;
+        DisplayHireEmployeeMenu hireEmployeeMenu;
     };
 }
 

@@ -93,4 +93,6 @@ add_executable(cpp
         code/employ/custom/menu/employee/update/base/UpdateBaseEmployeeMenu.cpp
         code/employ/custom/menu/employee/update/base/UpdateBaseEmployeeMenu.h
         code/employ/custom/menu/employee/fire/FireEmployeeMenu.cpp
-        code/employ/custom/menu/employee/fire/FireEmployeeMenu.h)
+        code/employ/custom/menu/employee/fire/FireEmployeeMenu.h
+        code/employ/custom/menu/employee/fire/FireEmployeeMenuDriver.cpp
+        code/employ/custom/menu/employee/fire/FireEmployeeMenuDriver.h)

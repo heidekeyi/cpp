@@ -23,7 +23,7 @@ void driver() {
     driverMode();
     driverController();
     driverMenu();
-//    employ::custom::AppCustom{}.start();
+    employ::custom::AppCustom{}.start();
 }
 
 #include "utils/display/DisplayUtilsDriver.h"
@@ -110,6 +110,7 @@ void driverController() {
 #include "employ/custom/menu/employee/display/fire/DisplayFireEmployeeMenuDriver.h"
 #include "employ/custom/menu/employee/display/hire/DisplayHireEmployeeMenuDriver.h"
 #include "employ/custom/menu/employee/hire/HireEmployeeMenuDriver.h"
+#include "employ/custom/menu/employee/fire/FireEmployeeMenuDriver.h"
 
 void driverMenu() {
     using namespace employ::custom::menu;
@@ -133,6 +134,9 @@ void driverMenu() {
 //            .display()
 //            .action();
 //    HireEmployeeMenuDriver{}
+//            .display()
+//            .action();
+//    FireEmployeeMenuDriver{}
 //            .display()
 //            .action();
 }

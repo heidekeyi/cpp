@@ -12,8 +12,8 @@ namespace employ::custom::menu {
                 .width(8).out("empNo")
                 .width(8).out("name")
                 .width(10).out("salary")
-                .width(21).out("hireTime")
-                .width(21).out("fireTime")
+                .width(12).out("hireTime")
+                .width(12).out("fireTime")
                 .next();
         for (auto i = 0; i < vEmployee.size(); ++i) {
             auto e = vEmployee[i];
@@ -24,8 +24,8 @@ namespace employ::custom::menu {
                     .width(8).out(e.empNo())
                     .width(8).out(e.name())
                     .width(10).out(s)
-                    .width(21).out(e.hire())
-                    .width(21).out(e.fire())
+                    .width(12).out(e.hire())
+                    .width(12).out(e.fire())
                     .next();
         }
     }

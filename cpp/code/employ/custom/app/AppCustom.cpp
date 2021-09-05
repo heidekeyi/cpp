@@ -9,6 +9,7 @@
 #include "../menu/salary/promote/PromoteSalaryMenu.h"
 #include "../menu/salary/demote/DemoteSalaryMenu.h"
 #include "../menu/employee/hire/HireEmployeeMenu.h"
+#include "../menu/employee/fire/FireEmployeeMenu.h"
 
 namespace employ::custom {
     using namespace employ::custom::menu;
@@ -32,12 +33,13 @@ namespace employ::custom {
     }
 
     AppCustom &AppCustom::initMenu() {
+        vMenu.push_back(new HireEmployeeMenu);
+        vMenu.push_back(new FireEmployeeMenu);
         vMenu.push_back(new DisplayAllEmployeeMenu);
         vMenu.push_back(new DisplayHireEmployeeMenu);
         vMenu.push_back(new DisplayFireEmployeeMenu);
         vMenu.push_back(new PromoteSalaryMenu);
         vMenu.push_back(new DemoteSalaryMenu);
-        vMenu.push_back(new HireEmployeeMenu);
         vMenu.push_back(quitMenu);
         return *this;
     }

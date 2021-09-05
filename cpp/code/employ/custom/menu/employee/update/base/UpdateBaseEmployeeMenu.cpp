@@ -5,6 +5,26 @@
 #include "UpdateBaseEmployeeMenu.h"
 
 namespace employ::custom::menu {
+    using std::cin;
+
+    size_t UpdateBaseEmployeeMenu::id() {
+        size_t val;
+        cin >> val;
+        return val;
+    }
+
+    int UpdateBaseEmployeeMenu::value() {
+        int val;
+        cin >> val;
+        return val;
+    }
+
+    string UpdateBaseEmployeeMenu::word() {
+        string val;
+        cin >> val;
+        return val;
+    }
+
     void UpdateBaseEmployeeMenu::empNo(const EmployeeTable &obj) {
         update(obj);
     }
@@ -23,5 +43,13 @@ namespace employ::custom::menu {
 
     void UpdateBaseEmployeeMenu::update(const EmployeeTable &obj) {
         employeeController.update(obj);
+    }
+
+    void UpdateBaseEmployeeMenu::displayEmployee() {
+        hireEmployeeMenu.action();
+    }
+
+    EmployeeTable UpdateBaseEmployeeMenu::employee(size_t id) {
+        return employeeController.get(id);
     }
 }
